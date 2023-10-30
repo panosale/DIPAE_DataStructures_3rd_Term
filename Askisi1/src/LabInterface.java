@@ -1,3 +1,4 @@
+// Άσκηση 1.1
 public interface LabInterface {
     public boolean insertStudent(Student std);
     public boolean deleteStudent(Student std);
