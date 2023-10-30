@@ -1,3 +1,4 @@
+// Άσκηση 1.1
 public class Student {
     private int aM;
     private String firstName;
