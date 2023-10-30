@@ -1,3 +1,4 @@
+// Άσκηση 1.1
 public class Lab implements LabInterface{
     private String labName;
     private int labCapacity;
@@ -101,6 +102,7 @@ public class Lab implements LabInterface{
     }
 
     public double averageGrade() {
+        // Μέσος όρος βαθμολογιών όλου του τμήματος
         double sum = 0.0;
         for (int i = 0; i < this.labCurrentSize; i++)
             sum = sum + this.labArray[i].getVathmos();
