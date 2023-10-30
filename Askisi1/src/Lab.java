@@ -20,23 +20,23 @@ public class Lab implements LabInterface{
     }
 
     // Setters-Getters
-    public void setLabName(String labName) {
-        this.labName = labName;
+    public void setLabName(String newLabName) {
+        this.labName = newLabName;
     }
     public String getLabName() {
         return this.labName;
     }
 
-    public void setLabCapacity(int labCapacity) {
-        this.labCapacity = labCapacity;
+    public void setLabCapacity(int newLabCapacity) {
+        this.labCapacity = newLabCapacity;
     }
 
     public int getLabCapacity() {
         return this.labCapacity;
     }
 
-    public void setLabCurrentSize(int labCurrentSize) {
-        this.labCurrentSize = labCurrentSize;
+    public void setLabCurrentSize(int newLabCurrentSize) {
+        this.labCurrentSize = newLabCurrentSize;
     }
 
     public int getLabCurrentSize() {
@@ -47,7 +47,11 @@ public class Lab implements LabInterface{
         for (int i = 0; i < this.labCurrentSize; i++)
             System.out.println("Φοιτητής [" + (i+1) + "]: \n" + this.labArray[i].toString() + "\n");
     }
-
+    // toString
+    public String toString() {
+        code here
+    }
+    // Μέθοδοι διαχείρισης δεδομένων
     public boolean insertStudent(Student std) {
         // Εισαγωγή φοιτητή στο τμήμα
         if (this.labCurrentSize >= this.labCapacity) {
