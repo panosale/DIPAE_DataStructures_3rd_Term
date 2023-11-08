@@ -29,5 +29,6 @@ public class Main {
         System.out.println("Αποτυχόντες φοιτητές: " + myLab.failedStudents());
         System.out.println("***** Εκτύπωση Μέσου Όρου βαθμολογίας του τμήματος.");
         System.out.println("Μέσος όρος: " + myLab.averageGrade());
+        System.out.println("Πληροφορίες: " + myLab);
     }
 }

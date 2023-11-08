@@ -49,7 +49,7 @@ public class Lab implements LabInterface{
     }
     // toString
     public String toString() {
-        code here
+        return "Εργαστήριο: " + this.labName + ".\nΧωρητικότητα εργαστηρίου: " + this.labCapacity + " σπουδαστές.\nΤρέχον μέγεθος: " + this.labCurrentSize + " σπουδαστές.";
     }
     // Μέθοδοι διαχείρισης δεδομένων
     public boolean insertStudent(Student std) {
