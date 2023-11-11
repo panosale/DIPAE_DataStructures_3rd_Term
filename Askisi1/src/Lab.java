@@ -54,13 +54,13 @@ public class Lab implements LabInterface{
     // Μέθοδοι διαχείρισης δεδομένων
     public boolean insertStudent(Student std) {
         // Εισαγωγή φοιτητή στο τμήμα
-        if (this.labCurrentSize >= this.labCapacity) {
-            System.out.println("Lab '" + this.labName + "' is full.");
-            return false;
+        if (this.labCurrentSize >= this.labCapacity) { // Αν το μέγεθος του εργαστηρίου έχει φτάσει την χωρητικότητα του...
+            System.out.println("Lab '" + this.labName + "' is full."); //... τότε εμφανίζει μήνυμα πληρότητας...
+            return false; // ...και επιστρέφει false
         }
-        else {
-            this.labArray[labCurrentSize++] = std;
-            return true;
+        else { // Διαφορετικά...
+            this.labArray[labCurrentSize++] = std; //...προσθέτει το νέο φοιτητή στην τρέχουσα θέση, κατόπιν αυξάνει το μέγεθος τους εργαστηρίου...
+            return true; //...και επιστρέφει true
         }
     }
 

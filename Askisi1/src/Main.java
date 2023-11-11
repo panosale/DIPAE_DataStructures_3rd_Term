@@ -8,7 +8,7 @@ public class Main {
         Student st5 = new Student(555, "Μαρία", "Γεωργιάδου", 21, 'Θ', 6.4, 0);
         Student st6 = new Student(666, "Λουκάς", "Θωίδης", 23, 'Α', 7, 1);
         Student st7 = new Student(777, "Κωνσταντίνος", "Αργυρός", 20, 'Α', 6.2, 0);
-        Student st8 = new Student(888, "Αλεξάνδρα", "Παπανίκα", 19, 'Θ', 7.1, 1);
+        Student st8 = new Student(888, "Αλεξάνδρα", "Παπανίκα", 19, 'Θ', 3.1, 1);
         Student st9 = new Student(999, "Μαρία", "Αναστασιάδου", 21, 'Θ', 6.1, 2);
         Student st10 = new Student(101010, "Νικόλαος", "Γεωργίου", 20, 'Α', 7.7, 0);
         Student st11 = new Student(111111, "Φοίβος", "Δελιβοριάς", 22, 'Α', 6, 1);

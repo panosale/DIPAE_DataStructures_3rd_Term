@@ -11,12 +11,11 @@ public class LaboratoryCourse implements LaboratoryCourseInterface{
         // Semi constructor
         this (newCourseName, 5);
     }
-    public LaboratoryCourse(String newCourseName, int newLabsNumber) {
+    public LaboratoryCourse(String newCourseName, int newLabsCapacity) {
         // Full constructor
         this.courseName = newCourseName;
-        this.labsCapacity = 0;
-        this.labsNumber = newLabsNumber;
-        courseArray = new Lab[newLabsNumber];
+        this.labsCapacity = newLabsCapacity;
+        courseArray = new Lab[newLabsCapacity];
     }
 
     // Setters-Getters
@@ -61,7 +60,7 @@ public class LaboratoryCourse implements LaboratoryCourseInterface{
     }
     private int[] successStatus() { // ΝΑ ΕΛΕΓΞΩ ΑΝ ΜΠΑΙΝΕΙ ΣΤΟ INTERFACE
         // Επιστρέφει το πλήθος τον φοιτητών που πέτυχαν-απέτυχαν στο μάθημα ανά εργαστήριο και συνολικά για το εργαστηριακό μάθημα
-        int[] pin = new int[2 * this.labsNumber];
+        int[] pin = new int[2 * this.labsNumber + 2]; // ΓΙΑΤΙ ΓΙΝΕΤΑΙ ΑΥΤΟ;
         int succeeded = 0;
         int failed = 0;
         for (int i = 0; i < this.labsNumber; i++) { // ΓΙΑΤΙ ΓΙΝΕΤΑΙ ΑΥΤΟ;
