@@ -14,7 +14,7 @@ public class ArrayStack implements Stack{
     // Full constructor
     public ArrayStack(int newCapacity) {
         this.stackCapacity = newCapacity;
-        S = new Object[this.stackCapacity];
+        this.S = new Object[this.stackCapacity];
     }
     public int getStackSize() {
         // Επιστρέφει το μέγεθος της Στοίβας
@@ -32,7 +32,7 @@ public class ArrayStack implements Stack{
         // Επιστρέφει το στοιχείο που βρίσκεται στην κορυφή της Στοίβας
         if (this.stackIsEmpty())
             throw new StackEmptyException(MSG_STACK_EMPTY);
-        return S[this.top];
+        return this.S[this.top];
     }
     public void pushStackElement(Object item) throws StackFullException {
         // Εισάγει ένα νέο στοιχείο στην κορυφή της Στοίβας
@@ -40,7 +40,7 @@ public class ArrayStack implements Stack{
         if (this.getStackSize() == this.stackCapacity) // Αυτή η γραμμή φαίνεται να επιστρέφει σωστό μέγεθος της Στοίβας
             throw new StackFullException(MSG_STACK_FULL);
         System.out.println("*** Top before push: " + this.top); // FOR TESTS
-        S[++this.top] = item;
+        this.S[++this.top] = item; // ΠΡΟΣΟΧΗ! Πρώτα αυξάνει το top και μετά εισάγει το στοιχείο (item) στον πίνακα
         System.out.println("*** Top after push: " + this.top); // FOR TESTS
     }
     public Object popStackElement() throws StackEmptyException {
@@ -48,9 +48,9 @@ public class ArrayStack implements Stack{
         Object tmpElement;
         if (this.stackIsEmpty())
             throw new StackEmptyException(MSG_STACK_EMPTY);
-        tmpElement = S[top];
+        tmpElement = this.S[top];
         System.out.println("*** Top before push: " + this.top); // FOR TESTS
-        S[this.top--] = null; // Για τον garbage collector (εκκαθάριση της μνήμης από τα "σκουπίδια")
+        this.S[this.top--] = null; // ΠΡΟΣΟΧΗ! Πρώτα θέτει null στη θέση του top για τον garbage collector (εκκαθάριση της μνήμης από τα "σκουπίδια") και μετά το μειώνει
         System.out.println("*** Top after push: " + this.top); // FOR TESTS
         return tmpElement;
     }
