@@ -1,5 +1,5 @@
 public interface LaboratoryCourseInterface {
-    public void printTotalNumberOStudents();
+    public void printTotalNumberOfStudents();
     // Εκτυπώνει το συνολικό πλήθος των φοιτητών που παρακολουθούν το εργαστηριακό μάθημα
     public void printSuccessStatus();
     // Εκτυπώνει το πλήθος τον φοιτητών που πέτυχαν-απέτυχαν στο μάθημα ανά εργαστήριο και συνολικά για το εργαστηριακό μάθημα
