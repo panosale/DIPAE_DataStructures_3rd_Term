@@ -1,6 +1,5 @@
-public class StackFullException extends Exception {
-    public StackFullException() {}
-    public StackFullException(String s) {
-        super(s);
+public class StackFullException extends RuntimeException {
+    public StackFullException(String msg) {
+        super(msg);
     }
 }
