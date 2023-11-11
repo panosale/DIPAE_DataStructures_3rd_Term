@@ -29,7 +29,7 @@ public class Management {
     private static Student createNewStudent() {
         Student tmpStudent = new Student();
         String promptGenderSuffix = "";
-        System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτρια (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
+        System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτριας (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
         char studentGender = UserInput.getChar();
         if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'm' || studentGender == 'M') {
             promptGenderSuffix = "του φοιτητή: ";
