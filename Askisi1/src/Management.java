@@ -14,9 +14,10 @@ public class Management {
             userSelection = UserInput.getInteger();
             switch (userSelection) {
                 case 1 -> {
-                    System.out.println("ΕΙΣΑΓΩΓΗ ΦΟΙΤΗΤΗ.\n");
+                    System.out.println("ΕΙΣΑΓΩΓΗ ΦΟΙΤΗΤΗ...");
                     tmpStud = createNewStudent();
-                    addStudentToLab(tmpStud);
+                    System.out.println("ΠΡΟΣΘΗΚΗ ΦΟΙΤΗΤΗ ΣΕ ΕΡΓΑΣΤΗΡΙΟ...");
+                    addStudentToLab(tmpStud, course);
                 }
                 case 2 -> System.out.println("you seletced 2\n");
                 case 3 -> System.out.println("you seletced 3\n");
@@ -28,7 +29,7 @@ public class Management {
     private static Student createNewStudent() {
         Student tmpStudent = new Student();
         String promptGenderSuffix = "";
-        System.out.println("Δώσε το φύλο του φοιτητή/της φοιτήτρια (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
+        System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτρια (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
         char studentGender = UserInput.getChar();
         if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'm' || studentGender == 'M') {
             promptGenderSuffix = "του φοιτητή: ";
@@ -57,10 +58,13 @@ public class Management {
             tmpStudent.setArithmosApousion(UserInput.getInteger());
         return tmpStudent;
     }
-    public static void addStudentToLab(Student stud) {
+    public static void addStudentToLab(Student stud, LaboratoryCourse course) {
 
-        System.out.println("Διαθέσιμα τμήματα και ελεύθερες θέσεις ανα τμήμα:");
-
+        System.out.println("Διαθέσιμα τμήματα και ελεύθερες θέσεις ανα τμήμα:" + course.getLabsNumber());
+        for (int i = 0; i < course.getLabsNumber(); i++) {
+            System.out.println("Εργαστήριο: " + course.getCourseLabs()[i].getLabName() + ", Χωρητικότητα: " + course.getCourseLabs()[i].getLabCapacity() +
+                    ", Ελεύθερες: " + (course.getCourseLabs()[i].getLabCapacity() - course.getCourseLabs()[i].getLabCurrentSize()));
+        }
         System.out.print("Επιλέξτε εργαστήριο εισαγωγής: ");
     }
 }

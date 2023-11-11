@@ -51,7 +51,7 @@ public class Main {
         System.out.println("***** Εκτύπωση Μέσου Όρου βαθμολογίας του εργαστηρίου.");
         System.out.println("Μέσος όρος: " + lab1.averageGrade());
         System.out.println("***** Πληροφορίες *****\n" + lab1);
-
+        System.out.println("\n\n****************************************************************************************\n\n");
         LaboratoryCourse course = new LaboratoryCourse("Δομές Δεδομένων");
         course.insertLab(lab1);
         course.insertLab(lab2);

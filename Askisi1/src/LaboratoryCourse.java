@@ -78,7 +78,7 @@ public class LaboratoryCourse implements LaboratoryCourseInterface{
     // Implementation of LaboratoryCourseInterface interface methods
     public void printTotalNumberOfStudents() {
             // Εκτυπώνει τον συνολικό αριθμό των φοιτητών που παρακολουθούν το εργαστηριακό μάθημα
-            System.out.print("Ο συνολικός αριθμός των φοιτητών που παρακολουθούν το εργαστηριακό μάθημα [" +
+            System.out.println("Ο συνολικός αριθμός των φοιτητών που παρακολουθούν το εργαστηριακό μάθημα [" +
                     this.courseName + "] είναι: " + this.getNumberOfStudents());
     }
     public void printSuccessStatus() {
@@ -115,5 +115,10 @@ public class LaboratoryCourse implements LaboratoryCourseInterface{
         System.out.println("Στο μάθημα: " + this.courseName +
                 "\n" + 100 * (float)pin[2 * this.labsNumber] / this.getNumberOfStudents() + " ποσοστό φοιτητών πέτυχαν, ενω " +
                 "\n" + 100 * (float)pin[2 * this.labsNumber + 1] / this.getNumberOfStudents() + " ποσοστό φοιτητών απέτυχαν");
+    }
+
+    // Για την Επιπλέον Εξάσκηση
+    public Lab[] getCourseLabs() {
+        return courseArray;
     }
 }
