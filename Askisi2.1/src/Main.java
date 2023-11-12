@@ -1,5 +1,3 @@
-import java.util.Random;
-
 // Δομές δεδομένων - Άσκηση 2.1 - Ζάρια
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +12,6 @@ public class Main {
             diceRollsArray[(die1.rollDie() + die2.rollDie()) - 2]++; // Αύξηση κατά 1 της θέσης που ταιριάζει με το αποτέλεσμα της ρίψης.
                 // Η θέση είναι +2 επειδή η αρίθμηση των θέσεων των πινάκων ξεκινάει απ' το 0.
         for (int i = 0; i < MAX_DIE_RESULT; i++) //  Εμφάνιση αποτελεσμάτων
-            System.out.println("Τα ζάρια έφεραν " + (i + 2) + " [" + diceRollsArray[i] + "] φορές.");
+            System.out.println("Τα ζάρια έφεραν " + (i + 2) + " [" + diceRollsArray[i] + "] φορές."); // Η θέση είναι i + 2 επειδή η αρίθμηση των θέσεων των πινάκων ξεκινάει απ' το 0.
     }
 }
