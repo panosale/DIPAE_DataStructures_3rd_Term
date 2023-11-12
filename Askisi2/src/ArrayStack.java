@@ -1,4 +1,4 @@
-public class ArrayStackInterface implements StackInterface {
+public class ArrayStack implements StackInterface {
     private static final String MSG_STACK_FULL = "Υπερχείλιση στοίβας. Η στοίβα είναι πλήρης."; // Δήλωση σταθεράς μηνύματος πλήρους στοίβας
     private static final String MSG_STACK_EMPTY = "Η στοίβα είναι κενή."; // Δήλωση σταθεράς μηνύματος κενής στοίβας
     public static final int MAX_CAPACITY = 100; // Δήλωση σταθεράς μέγιστου μεγέθους στοίβας
@@ -6,11 +6,11 @@ public class ArrayStackInterface implements StackInterface {
     private Student[] S;
     private int top = -1;
     // Default constructor
-    public ArrayStackInterface() {
+    public ArrayStack() {
         this(MAX_CAPACITY);
     }
     // Full constructor
-    public ArrayStackInterface(int newCapacity) {
+    public ArrayStack(int newCapacity) {
         this.stackCapacity = newCapacity;
         this.S = new Student[this.stackCapacity];
     }
@@ -37,9 +37,9 @@ public class ArrayStackInterface implements StackInterface {
         //if (this.getStackSize() == this.stackCapacity - 1) // Στις σημειώσεις έχει αυτή τη γραμμή αλλά δεν επιστρέφει σωστό μέγεθος της Στοίβας
         if (this.getStackSize() == this.stackCapacity) // Αυτή η γραμμή φαίνεται να επιστρέφει σωστό μέγεθος της Στοίβας
             throw new StackFullException(MSG_STACK_FULL);
-        System.out.println("*** Top before push: " + this.top); // FOR TESTS
+//        System.out.println("*** Top before push: " + this.top); // FOR TESTS
         this.S[++this.top] = stud; // ΠΡΟΣΟΧΗ! Πρώτα αυξάνει το top και μετά εισάγει το στοιχείο (item) στον πίνακα
-        System.out.println("*** Top after push: " + this.top); // FOR TESTS
+//        System.out.println("*** Top after push: " + this.top); // FOR TESTS
     }
     public Student popStackElement() throws StackEmptyException {
         // Εξάγει και επιστρέφει το στοιχείο που βρίσκεται στην κορυφή της Στοίβας
