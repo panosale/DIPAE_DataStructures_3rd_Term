@@ -1,4 +1,4 @@
-// Άσκηση 2
+// Άσκηση 2.1 & 2.2
 // Παράδειγμα στοίβας σε Java
 public class Main {
     public static void main(String[] args) {
