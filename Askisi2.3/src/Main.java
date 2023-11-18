@@ -30,7 +30,7 @@ public class Main {
         System.out.println("***** Άσκηση 2.3. Έλεγχος παρενθέσεων *****");
         String sentenceToCheck1 = "(x + y) + 3(x - y) - 2(3x + y)";
         simpleBraucketsCheck(sentenceToCheck1);
-        sentenceToCheck1 = "(x + y) + 3(x - y) - 2(3x + y)";
+        sentenceToCheck1 = "(x + y)) + 3(x - y) - 2(3x + y)";
         simpleBraucketsCheck(sentenceToCheck1);
     }
 }
