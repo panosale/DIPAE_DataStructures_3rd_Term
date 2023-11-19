@@ -1,4 +1,4 @@
-// Άσκηση 2.5. Η Ουρά χειρίζεται μόνο αντικείμενα τύπου Objet (πιο γενική χρήση)
+// Άσκηση 2.5 & 2.6. Η Ουρά χειρίζεται μόνο αντικείμενα τύπου Object (πιο γενική χρήση)
 // Παράδειγμα ουράς σε Java
 public class ArrayQueue implements Queue{
     private static final String MSG_QUEUE_FULL = "Υπερχείλιση ουράς. Η ουρά είναι πλήρης."; // Δήλωση σταθεράς μηνύματος πλήρους ουράς
@@ -48,4 +48,15 @@ public class ArrayQueue implements Queue{
         this.Q[firstElement++] = null; // ΠΡΟΣΟΧΗ! Πρώτα θέτει null στη θέση του firstElement για τον garbage collector (εκκαθάριση της μνήμης από τα "σκουπίδια") και μετά το αυξάνει
         return tmpElement;
     }
+
+    // Added by Panos
+    public void showAllQueueElements(String typeOf) {
+        System.out.println(this.Q[firstElement].getClass().getTypeName().equals(typeOf));
+//        if (this.queueIsEmpty())
+//            System.out.println("Η ουρά είναι κενή.");
+//        else {
+//            for (int i = this.firstElement; i < this.lastElement; i++)
+//                System.out.println(this.Q);
+//        }
+    } // Added by Panos
 }

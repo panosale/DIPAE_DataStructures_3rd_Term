@@ -52,6 +52,7 @@ public class ArrayStack implements StackInterface {
 //        System.out.println("*** Top after push: " + this.top); // FOR TESTS
         return tmpElement;
     }
+    // Added by Panos
     public void showAllStackElements() { // ΝΑ ΔΙΝΩ ΣΑΝ ΠΑΡΑΜΑΕΤΡΟ ΤΗΝ ΚΛΑΣΗ ΠΟΥ ΘΕΛΩ, ΝΑ ΕΛΕΓΧΕΙ ΑΝ ΤΟ ΑΝΤΙΚΕΙΜΕΝΟ ΕΙΝΑΙ ΑΥΤΗΣ ΤΗΣ ΚΛΑΣΗΣ ΚΑΙ ΝΑ ΤΟ ΤΥΠΩΝΕΙ
         if (this.stackIsEmpty())
             System.out.println("Η Στοίβα είναι κενή.");
@@ -63,5 +64,5 @@ public class ArrayStack implements StackInterface {
 //            for (int i = 0; i < this.top + 1; i++)
 //                System.out.println("Ονοματεπώνυμο: " + S[i].getLastName() + ", " + S[i].getFirstName() + ", ΑΜ: " + S[i].getAM());
 //        }
-    }
+    } // Added by Panos
 }
