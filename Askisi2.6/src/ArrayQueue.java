@@ -50,13 +50,14 @@ public class ArrayQueue implements Queue{
     }
 
     // Added by Panos
-    public void showAllQueueElements(String typeOf) {
-        System.out.println(this.Q[firstElement].getClass().getTypeName().equals(typeOf));
-//        if (this.queueIsEmpty())
-//            System.out.println("Η ουρά είναι κενή.");
-//        else {
-//            for (int i = this.firstElement; i < this.lastElement; i++)
-//                System.out.println(this.Q);
-//        }
+    public void showAllQueueElements(String typeOf) { // ΝΑ ΔΟΚΙΜΑΣΩ ΝΑ ΔΙΝΩ ΓΙΑ ΠΑΡΑΜΕΤΡΟ ΕΝΑ OBJECT
+//        System.out.println(this.Q[firstElement].getClass().getTypeName().equals(typeOf));
+        if (this.queueIsEmpty())
+            System.out.println("Η ουρά είναι κενή.");
+        else
+            if (this.Q[firstElement].getClass().getTypeName().equals(typeOf))
+                for (int i = this.firstElement; i < this.lastElement; i++)
+                    System.out.println(this.Q[i].getClass());
+
     } // Added by Panos
 }
