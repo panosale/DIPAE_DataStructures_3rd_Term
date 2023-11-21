@@ -33,13 +33,16 @@ public class Main {
 //        tmpStud = new Student(121212, "Απόστολος", "Ρίζος", 18, 'Α', 4.1, 3);
 //        studentsStack.enqueueElement(tmpStud); // Upcasting
         System.out.println("\nΌλα τα στοιχεία της Ουράς είναι:");
-    studentsStack.showAllQueueElements("Student");
+        studentsStack.showAllQueueElements(tmpStud, 4);
         System.out.println();
         tmpStud = (Student)studentsStack.dequeueElement();
-        System.out.println("1) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
-        tmpStud = (Student)studentsStack.dequeueElement();
-        System.out.println("2) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
-        tmpStud = (Student)studentsStack.dequeueElement();
-        System.out.println("3) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
+//        System.out.println("1) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
+//        tmpStud = (Student)studentsStack.dequeueElement();
+//        System.out.println("2) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
+//        tmpStud = (Student)studentsStack.dequeueElement();
+//        System.out.println("3) Student with AM: " + tmpStud.getAM() + " was removed from the Stack.");
+//        System.out.println("\nΌλα τα στοιχεία της Ουράς είναι:");
+//        studentsStack.showAllQueueElements(tmpStud, 2);
+//        System.out.println();
     }
 }

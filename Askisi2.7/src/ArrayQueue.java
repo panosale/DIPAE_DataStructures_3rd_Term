@@ -1,5 +1,3 @@
-// Άσκηση 2.5 & 2.6. Η Ουρά χειρίζεται μόνο αντικείμενα τύπου Object (πιο γενική χρήση)
-// Παράδειγμα ουράς σε Java
 public class ArrayQueue implements Queue{
     private static final String MSG_QUEUE_FULL = "Υπερχείλιση ουράς. Η ουρά είναι πλήρης."; // Δήλωση σταθεράς μηνύματος πλήρους ουράς
     private static final String MSG_QUEUE_EMPTY = "Η ουρά είναι κενή."; // Δήλωση σταθεράς μηνύματος κενής ουράς
@@ -48,19 +46,4 @@ public class ArrayQueue implements Queue{
         this.Q[firstElement++] = null; // ΠΡΟΣΟΧΗ! Πρώτα θέτει null στη θέση του firstElement για τον garbage collector (εκκαθάριση της μνήμης από τα "σκουπίδια") και μετά το αυξάνει
         return tmpElement;
     }
-
-    // Added by Panos
-    public void showAllQueueElements(Object typeOf, int classMethod) { // ΝΑ ΔΟΚΙΜΑΣΩ ΝΑ ΔΙΝΩ ΓΙΑ ΠΑΡΑΜΕΤΡΟ ΕΝΑ OBJECT // ΈΛΕΓΧΟΣ ΚΑΙ ΔΙΟΡΘΩΣΗ
-//        System.out.println(typeOf.getClass().getTypeName());
-        if (this.queueIsEmpty())
-            System.out.println("Η ουρά είναι κενή.");
-        else {
-//            System.out.println(this.Q[firstElement].getClass().getTypeName().equals(typeOf.getClass().getTypeName()));
-            if (this.Q[firstElement].getClass().getTypeName().equals(typeOf.getClass().getTypeName()))
-                for (int i = this.firstElement; i < this.lastElement; i++) {
-                    System.out.println(this.Q[i].getClass().getMethods()[classMethod].getName());
-//                    System.out.println(this.Q[i].getClass());
-                }
-        }
-    } // Added by Panos
 }
