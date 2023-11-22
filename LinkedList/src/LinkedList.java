@@ -3,7 +3,7 @@ public class LinkedList {
     private static final String MSG_LIST_EMPTY = "Η λίστα είναι κενή!"; // Δήλωση σταθεράς μηνύματος κενής λίστας
     private Node firstNode, lastNode;
     public LinkedList() { // Default constructor
-        firstNode = lastNode = null;
+        this.lastNode = this.lastNode = null;
     }
     public Node getFirstNode() {
         return this.firstNode;
@@ -18,13 +18,13 @@ public class LinkedList {
         if (this.isEmpty())
             this.firstNode = this.lastNode = new Node(newItem, null);
         else
-            this.firstNode = new Node(newItem, firstNode);
+            this.firstNode = new Node(newItem, this.firstNode);
     }
     public void insertLas(Object newItem) {
         if (this.isEmpty())
             this.firstNode = this.lastNode = new Node(newItem, null);
         else
-            this.lastNode = this.lastNode.next = new Node(newItem, firstNode);
+            this.lastNode = this.lastNode.next = new Node(newItem, this.firstNode);
     }
     public Object removeFirst() throws ListEmptyException {
         if (this.isEmpty())
