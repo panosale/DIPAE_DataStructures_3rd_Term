@@ -11,5 +11,17 @@ public class Node {
         this.item = newItem;
         this.nextNode = newNode;
     }
-    
+    // Setters - Getters
+    public void setItem(Object item) {
+        this.item = item;
+    }
+    public Object getItem() {
+        return item;
+    }
+    public void setNextNode(Node nextNode) {
+        this.nextNode = nextNode;
+    }
+    public Node getNextNode() {
+        return nextNode;
+    }
 }
