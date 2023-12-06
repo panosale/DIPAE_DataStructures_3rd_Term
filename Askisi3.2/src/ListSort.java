@@ -9,7 +9,7 @@ public class ListSort extends LinkedList {
             currentNode = traceNode;
             minNode = traceNode;
             while (currentNode != null) {
-                if ((currentNode.getItem()).compareTo(minNode.getItem()) < 0) // Έλεγχος εδώ
+                if ((currentNode.getItem()).compareTo(minNode.getItem()) < 0) // Έλεγχος εδώ. Πρέπει να γίνει ένα comparable
                     minNode = currentNode;
                 currentNode = currentNode.getNext();
             }
