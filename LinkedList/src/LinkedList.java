@@ -15,8 +15,16 @@ public class LinkedList implements List {
         return (this.firstNode == null); // Επιστρέφει true (η λίστα είναι κενή) αν ο πρώτος κόμβος είναι null
     }
     @Override
-    public int getSize() {
-        return 0;
+    public int getSize() { // Να ελεγχθεί αν είναι σωστή
+        int listSize = 0;
+        if (this.isEmpty())
+            System.out.println(MSG_LIST_EMPTY); // Γιατί όχι το? -> throw new ListEmptyException(MSG_LIST_EMPTY);
+        else {
+            Node currentNode = this.firstNode;
+            while (currentNode != null)
+                listSize++;
+        }
+        return listSize;
     }
     public void insertFirst(Object newItem) {
         if (this.isEmpty())
@@ -34,8 +42,8 @@ public class LinkedList implements List {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
         Object removeItem = this.firstNode.item;
-        //if (this.firstNode == this.lastNode)
-        if (this.firstNode.equals(this.lastNode)) // Με την .equals. Για δοκιμή
+        if (this.firstNode == this.lastNode)
+//        if (this.firstNode.equals(this.lastNode)) // Με την .equals. Για δοκιμή
             this.firstNode = this.lastNode = null;
         else
             this.firstNode = this.firstNode.next;
@@ -46,6 +54,7 @@ public class LinkedList implements List {
             throw new ListEmptyException(MSG_LIST_EMPTY);
         Object removeItem = this.lastNode.item;
         if (this.firstNode == lastNode)
+//        if (this.firstNode.equals(this.lastNode)) // Με την .equals. Για δοκιμή
             this.firstNode = this.lastNode = null;
         else {
             Node currentNode = this.firstNode;
@@ -56,7 +65,6 @@ public class LinkedList implements List {
         }
         return removeItem;
     }
-
     public void printList() {
         if (this.isEmpty())
             System.out.println(MSG_LIST_EMPTY); // Γιατί όχι το? -> throw new ListEmptyException(MSG_LIST_EMPTY);
