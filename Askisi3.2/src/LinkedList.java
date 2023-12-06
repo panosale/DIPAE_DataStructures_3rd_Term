@@ -126,7 +126,7 @@ public class LinkedList implements List {
         boolean found = false;
         Node tmpNode = this.firstNode.getNext();
         while (tmpNode != null && !found)
-            if (((Comparable)tmpNode).compareTo((Comparable)item) == 0)
+            if (((Comparable)tmpNode.getItem()).compareTo((Comparable)item) == 0)
                 found = true;
             else
                 tmpNode = tmpNode.getNext();

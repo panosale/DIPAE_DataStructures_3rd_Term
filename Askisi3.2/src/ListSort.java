@@ -22,4 +22,8 @@ public class ListSort extends LinkedList {
         }
         return this;
     }
+    public LinkedList bubbleSort() {
+        //TODO: ΠΡΟΣΘΗΚΗ ΤΗΣ bubbleSort ΕΔΩ
+        return this;
+    }
 }
