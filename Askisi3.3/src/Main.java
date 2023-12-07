@@ -1,13 +1,14 @@
-// ΑΣΚΗΣΗ 3.2
+// ΑΣΚΗΣΗ 3.3
 public class Main {
     public static void main(String[] args) {
         ListSort L1 = new ListSort();
+        System.out.println(L1.getSize());
         L1.insertLast("4 Antonis");
         L1.insertLast("1 Panagiotis");
         L1.insertLast("3 Manolis");
         L1.insertLast("5 Odysseas");
         L1.insertLast("2 Giorgos");
-        String node2Find1 = "4 Antonis";
+        String node2Find1 = "3 Manolis";
         String node2Find2 = "6 Stergios";
         try {
             System.out.println("List size: " + L1.getSize());

@@ -123,13 +123,13 @@ public class LinkedList implements List {
     public boolean nodeExist(Object item) {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
-        boolean found = false;
-        Node tmpNode = this.firstNode.getNext();
-        while (tmpNode != null && !found)
-            if (((Comparable)tmpNode.getItem()).compareTo((Comparable)item) == 0)
-                found = true;
+        Node tmpNode = this.firstNode;
+        while (tmpNode != null)
+            if (tmpNode.getItem().equals(item))
+//            if (((Comparable)tmpNode.getItem()).compareTo((Comparable)item) == 0)
+                return true;
             else
                 tmpNode = tmpNode.getNext();
-        return found;
+        return false;
     }
 }

@@ -106,15 +106,18 @@ public class LinkedList implements List {
         Object max = this.firstNode.getItem();
         Node position = this.firstNode.getNext();
         while (position != null) {
-            Comparable CompMax = (Comparable)max;
-            Comparable CompItem = (Comparable)position.getItem();
-            if (CompMax.compareTo(CompItem) < 0)
+            // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
+            if ((((String)max).compareTo(((String)position.getItem())) <0 ))
+            // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+            // Υλοποίηση με Comparable - ΑΡΧΗ
+//            Comparable CompMax = (Comparable)max;
+//            Comparable CompItem = (Comparable)position.getItem();
+//            if (CompMax.compareTo(CompItem) < 0)
+            // Υλοποίηση με Comparable - ΤΕΛΟΣ
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
-/*
             if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0)
                 max = position.getItem();
-*/
             // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
             position = position.getNext();
         }
@@ -123,13 +126,13 @@ public class LinkedList implements List {
     public boolean nodeExist(Object item) {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
-        boolean found = false;
-        Node tmpNode = this.firstNode.getNext();
-        while (tmpNode != null && !found)
-            if (((Comparable)tmpNode.getItem()).compareTo((Comparable)item) == 0)
-                found = true;
+        Node tmpNode = this.firstNode;
+        while (tmpNode != null)
+            if (tmpNode.getItem().equals(item))
+//            if (((Comparable)tmpNode.getItem()).compareTo((Comparable)item) == 0)
+                return true;
             else
                 tmpNode = tmpNode.getNext();
-        return found;
+        return false;
     }
 }
