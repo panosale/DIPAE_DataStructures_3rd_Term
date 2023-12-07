@@ -1,5 +1,5 @@
 // Άσκηση 1.1
-public class Student {
+public class Student implements Comparable{
     private int aM;
     private String firstName;
     private String lastName;
@@ -77,5 +77,10 @@ public class Student {
     public String toString() {
         return "Αριθμός μητρώου: " + this.aM + "\nΟνοματεπώνυμο: " + this.lastName + ", " + this.firstName + "\nΦύλο: " + this.fylo + "\nΗλικία: " + this.hlikia
                 + "\nΑριθμός απουσιών: " + this.arithmosApousion + "\nΒαθμός: " + this.vathmos;
+    }
+    // Υλοποίηση της compareTo από το Interface Comparable
+    @Override
+    public int compareTo(Object o) {
+        return this.getAM() - ((Student)o).getAM();
     }
 }
