@@ -1,6 +1,6 @@
 public class LinkedList implements List {
     // Υλοποίηση μιας απλά Συνδεδεμένης Λίστας (linked list)
-    private static final String MSG_LIST_EMPTY = "Η λίστα είναι κενή!"; // Δήλωση σταθεράς μηνύματος κενής λίστας
+    public static final String MSG_LIST_EMPTY = "Η λίστα είναι κενή!"; // Δήλωση σταθεράς μηνύματος κενής λίστας
     private Node firstNode, lastNode;
     public LinkedList() { // Default constructor
         this.firstNode = this.lastNode = null;
@@ -214,42 +214,4 @@ public class LinkedList implements List {
         pin[1] = this.maxOfList();
     } // End of function: minMaxOfList()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.3
-    public Object minGradeOfList() { // Πρέπει να επιστρέφει τον σπουδαστή και όχι μόνο τον βαθμό του
-        if (this.isEmpty())
-            throw new ListEmptyException(MSG_LIST_EMPTY);
-        double minGrade = ((Student)this.firstNode.getItem()).getVathmos(); // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: Δεν χρειάζεται casting)
-        Object minStudent = this.firstNode.getItem();
-        Node position = this.firstNode.getNext();
-        while (position != null) {
-            if ((((Comparable<Double>)minGrade).compareTo(((Student)position.getItem()).getVathmos()) > 0)) {// <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
-                minGrade = ((Student) position.getItem()).getVathmos();
-                minStudent = position.getItem();
-            }
-            position = position.getNext();
-        }
-        return minStudent;
-    } // End of function: minGradeOfList()
-    public Object maxGradeOfList() { // Πρέπει να επιστρέφει τον σπουδαστή και όχι μόνο τον βαθμό του
-        if (this.isEmpty())
-            throw new ListEmptyException(MSG_LIST_EMPTY);
-        double maxGrade = ((Student)this.firstNode.getItem()).getVathmos(); // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: Δεν χρειάζεται casting)
-        Object maxStudent = this.firstNode.getItem();
-        Node position = this.firstNode.getNext();
-        while (position != null) {
-            if ((((Comparable<Double>)maxGrade).compareTo(((Student)position.getItem()).getVathmos()) < 0)) { // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
-                maxGrade = ((Student) position.getItem()).getVathmos();
-                maxStudent = position.getItem();
-            }
-            position = position.getNext();
-        }
-        return maxStudent;
-    } // End of function: maxGradeOfList()
-    public Object[] minMaxGradeOfList() { // Επιστρέφει πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
-        if (this.isEmpty())
-            throw new ListEmptyException(MSG_LIST_EMPTY);
-        Object[] minMax = new Object[2];
-        minMax[0] = this.minGradeOfList();
-        minMax[1] = this.maxGradeOfList();
-        return minMax;
-    } // End of function: minMaxGradeOfList()
 }

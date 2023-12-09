@@ -2,7 +2,7 @@
 public class Main {
     public static void main(String[] args) {
         // Τα παρακάτω είναι από την Άσκηση 3.3
-        LinkedList studentsList = new LinkedList();
+        StudentsLinkedList studentsList = new StudentsLinkedList();
         System.out.println("List size: " + studentsList.getSize());
         studentsList.insertLast(new Student(2022005, "Panos", "Alevropoulos", 47, 'Α', 5, 2));
         studentsList.insertLast(new Student(222, "Νικολετα", "Νικολάου", 27, 'Θ', 6.4, 1));
