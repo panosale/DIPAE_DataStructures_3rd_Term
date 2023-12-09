@@ -1,7 +1,8 @@
 // ΑΣΚΗΣΗ 3.3
 public class Main {
     public static void main(String[] args) {
-        ListSort L1 = new ListSort();
+//        ListSort L1 = new ListSort();
+        LinkedList L1 = new LinkedList();
         System.out.println(L1.getSize());
         L1.insertLast("4 Antonis");
         L1.insertLast("1 Panagiotis");
@@ -19,7 +20,7 @@ public class Main {
             System.out.println("Full list: ");
             L1.printList();
             System.out.println("Sorted full list: ");
-            L1 = (ListSort) L1.sortList();
+            L1 =  L1.sortList(); // ΔΕΝ ΧΡΕΙΑΖΕΤΑΙ ΝΑ ΕΠΙΣΤΡΕΦΕΙ ΤΗΝ ΤΙΜΗ
             L1.printList();
         }
         catch (ListEmptyException Error) {

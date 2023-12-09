@@ -116,7 +116,8 @@ public class LinkedList implements List {
             // Υλοποίηση με Comparable - ΤΕΛΟΣ
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
-            if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0)
+//            if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
+            if (((String)max).compareTo((String) position.getItem()) < 0)
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
             position = position.getNext();
@@ -135,4 +136,29 @@ public class LinkedList implements List {
                 tmpNode = tmpNode.getNext();
         return false;
     }
+    public LinkedList sortList() {
+        Node traceNode, currentNode, minNode;
+        traceNode = this.getFirstNode();
+        while (traceNode != null) {
+            currentNode = traceNode;
+            minNode = traceNode;
+            while (currentNode != null) {
+//                Comparable CompCurrentNode = (Comparable) currentNode.getItem(); // Ο παρακάτω έλεγχος γίνεται και έτσι
+//                if (CompCurrentNode.compareTo(minNode.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
+                if (((String)(currentNode.getItem())).compareTo((String)(minNode.getItem())) < 0)
+                    minNode = currentNode;
+                currentNode = currentNode.getNext();
+            } // End while currentNode
+            Object temp = traceNode.getItem(); // Έλεγχος εδώ
+            traceNode.setItem(minNode.getItem());
+            minNode.setItem(temp);
+            traceNode = traceNode.getNext();
+        } // End while traceNode
+        return this;
+    }
+    public LinkedList bubbleSort() {
+        //TODO: ΠΡΟΣΘΗΚΗ ΤΗΣ bubbleSort ΕΔΩ
+        return this;
+    }
+
 }
