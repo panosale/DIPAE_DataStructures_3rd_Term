@@ -107,8 +107,8 @@ public class LinkedList implements List {
         Node position = this.firstNode.getNext();
         while (position != null) {
             // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
-            if ((((Student)min).compareTo(((Student)position.getItem())) > 0)) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
-                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+            if (((String)min).compareTo((String) position.getItem()) > 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+            // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
                 // Υλοποίηση με Comparable - ΑΡΧΗ
 //            Comparable CompMax = (Comparable)max;
 //            Comparable CompItem = (Comparable)position.getItem();
@@ -117,7 +117,7 @@ public class LinkedList implements List {
                 min = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
 //            if (((Comparable)max).compareTo((Comparable)position.getItem()) > 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
-//            if (((Student)min).compareTo((Student) position.getItem()) > 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+//            if (((String)min).compareTo((String) position.getItem()) > 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
 //                min = position.getItem();
             // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
             position = position.getNext();
@@ -131,8 +131,8 @@ public class LinkedList implements List {
         Node position = this.firstNode.getNext();
         while (position != null) {
             // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
-            if ((((Student)max).compareTo(((Student)position.getItem())) < 0)) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
-                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+            if (((String)max).compareTo((String) position.getItem()) < 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+            // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
                 // Υλοποίηση με Comparable - ΑΡΧΗ
 //            Comparable CompMax = (Comparable)max;
 //            Comparable CompItem = (Comparable)position.getItem();
@@ -141,8 +141,6 @@ public class LinkedList implements List {
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
 //            if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
-            if (((Student)max).compareTo((Student) position.getItem()) < 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
-                max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
             position = position.getNext();
         }

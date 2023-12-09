@@ -12,8 +12,8 @@ public class Main {
         System.out.println("List size: " + studentsList.getSize());
         System.out.println("Full list: ");
         studentsList.printList();
-        String node2Find1 = "2022005";
-        String node2Find2 = "Stergios";
+        int node2Find1 = 2022005;
+        int node2Find2 = 7657;
         System.out.println();
         System.out.println(node2Find1 + " exists: " + studentsList.nodeExist(node2Find1));
         System.out.println(node2Find2 + " exists: " + studentsList.nodeExist(node2Find2));
