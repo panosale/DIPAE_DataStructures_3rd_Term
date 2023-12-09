@@ -13,7 +13,7 @@ public class LinkedList implements List {
     }
     public boolean isEmpty() {
         return (this.firstNode == null); // Επιστρέφει true (η λίστα είναι κενή) αν ο πρώτος κόμβος είναι null
-    }
+    } // End of function: isEmpty()
     @Override
     public int getSize() { // Να ελεγχθεί αν είναι σωστή
         int listSize = 0;
@@ -35,19 +35,19 @@ public class LinkedList implements List {
 */
         // Υλοποίηση με for - ΤΕΛΟΣ
         return listSize;
-    }
+    } // End of function: getSize()
     public void insertFirst(Object newItem) {
         if (this.isEmpty())
             this.firstNode = this.lastNode = new Node(newItem, null);
         else
             this.firstNode = new Node(newItem, this.firstNode);
-    }
+    } // End of function: insertFirst()
     public void insertLast(Object newItem) {
         if (this.isEmpty())
             this.firstNode = this.lastNode = new Node(newItem, null);
         else
             this.lastNode = this.lastNode.next = new Node(newItem, null);
-    }
+    } // End of function: insertLast()
     public Object removeFirst() throws ListEmptyException {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -58,7 +58,7 @@ public class LinkedList implements List {
         else
             this.firstNode = this.firstNode.next;
         return removedItem;
-    }
+    } // End of function: removeFirst()
     public Object removeLast() throws ListEmptyException {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -86,7 +86,7 @@ public class LinkedList implements List {
             currentNode.next = null;
         }
         return removedItem;
-    }
+    } // End of function: removeLast()
     public void printList() {
         if (this.isEmpty())
             System.out.println(MSG_LIST_EMPTY); // Γιατί όχι το? -> throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -98,7 +98,7 @@ public class LinkedList implements List {
             }
             System.out.println("\n");
         }
-    }
+    } // End of function: printList()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.2
     public Object maxOfList() {
         if (this.isEmpty())
@@ -107,13 +107,13 @@ public class LinkedList implements List {
         Node position = this.firstNode.getNext();
         while (position != null) {
             // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
-            if ((((String)max).compareTo(((String)position.getItem())) <0 ))
-            // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
-            // Υλοποίηση με Comparable - ΑΡΧΗ
+            if ((((String)max).compareTo(((String)position.getItem())) < 0))
+                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+                // Υλοποίηση με Comparable - ΑΡΧΗ
 //            Comparable CompMax = (Comparable)max;
 //            Comparable CompItem = (Comparable)position.getItem();
 //            if (CompMax.compareTo(CompItem) < 0)
-            // Υλοποίηση με Comparable - ΤΕΛΟΣ
+                // Υλοποίηση με Comparable - ΤΕΛΟΣ
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
 //            if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
@@ -123,7 +123,7 @@ public class LinkedList implements List {
             position = position.getNext();
         }
         return max;
-    }
+    } // End of function: maxOfList()
     public boolean nodeExist(Object item) {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -135,7 +135,7 @@ public class LinkedList implements List {
             else
                 tmpNode = tmpNode.getNext();
         return false;
-    }
+    } // End of function: nodeExist()
     public LinkedList sortList() {
         Node traceNode, currentNode, minNode;
         traceNode = this.getFirstNode();
@@ -145,20 +145,65 @@ public class LinkedList implements List {
             while (currentNode != null) {
 //                Comparable CompCurrentNode = (Comparable) currentNode.getItem(); // Ο παρακάτω έλεγχος γίνεται και έτσι
 //                if (CompCurrentNode.compareTo(minNode.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
-                if (((String)(currentNode.getItem())).compareTo((String)(minNode.getItem())) < 0)
+                if (((String)(currentNode.getItem())).compareTo((String)(minNode.getItem())) < 0) // Αύξουσα ταξινόμηση
                     minNode = currentNode;
                 currentNode = currentNode.getNext();
-            } // End while currentNode
+            } // End of while: currentNode
             Object temp = traceNode.getItem(); // Έλεγχος εδώ
-            traceNode.setItem(minNode.getItem());
-            minNode.setItem(temp);
-            traceNode = traceNode.getNext();
-        } // End while traceNode
+            traceNode.setItem(minNode.getItem()); // Swap
+            minNode.setItem(temp); // Swap
+            traceNode = traceNode.getNext(); // Swap
+        } // End of while: traceNode
         return this;
-    }
+    } // End of function: sortList()
     public LinkedList bubbleSort() {
-        //TODO: ΠΡΟΣΘΗΚΗ ΤΗΣ bubbleSort ΕΔΩ
+        Node currentNode = this.getFirstNode();
+        while (currentNode != null) {
+            Node secondNode = currentNode.getNext();
+            while (secondNode != null) {
+//                Comparable CompCurrentNode = (Comparable) currentNode.getItem(); // Ο παρακάτω έλεγχος γίνεται και έτσι
+//                if (CompCurrentNode.compareTo(secondNode.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
+                if (((String)(currentNode.getItem())).compareTo((String)(secondNode.getItem())) > 0) { // Αύξουσα ταξινόμηση
+                    Object temp = currentNode.getItem(); // Swap
+                    currentNode.setItem(secondNode.getItem()); // Swap
+                    secondNode.setItem(temp); // Swap
+                }
+                secondNode = secondNode.getNext();
+            } // End of while: secondNode
+            currentNode = currentNode.getNext();
+        } // End of while: currentNode
         return this;
-    }
-
+    } // End of function: bubbleSort()
+    public Object minOfList() {
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        Object min = this.firstNode.getItem();
+        Node position = this.firstNode.getNext();
+        while (position != null) {
+            // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
+            if ((((String)min).compareTo(((String)position.getItem())) > 0))
+                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+                // Υλοποίηση με Comparable - ΑΡΧΗ
+//            Comparable CompMax = (Comparable)max;
+//            Comparable CompItem = (Comparable)position.getItem();
+//            if (CompMax.compareTo(CompItem) < 0)
+                // Υλοποίηση με Comparable - ΤΕΛΟΣ
+                min = position.getItem();
+            // Εναλλακτικά μέσα στην if - ΑΡΧΗ
+//            if (((Comparable)max).compareTo((Comparable)position.getItem()) > 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
+            if (((String)min).compareTo((String) position.getItem()) > 0)
+                min = position.getItem();
+            // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
+            position = position.getNext();
+        }
+        return min;
+    } // End of function: minOfList()
+    public Object[] minMaxOfList() { // Επιστρέφει πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        Object[] minMax = new Object[2];
+        minMax[0] = this.minOfList();
+        minMax[1] = this.maxOfList();
+        return minMax;
+    } // End of function: minMaxOfList()
 }
