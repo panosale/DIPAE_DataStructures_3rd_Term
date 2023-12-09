@@ -100,6 +100,30 @@ public class LinkedList implements List {
         }
     } // End of function: printList()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.2
+    public Object minOfList() {
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        Object min = this.firstNode.getItem();
+        Node position = this.firstNode.getNext();
+        while (position != null) {
+            // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
+            if ((((Student)min).compareTo(((Student)position.getItem())) > 0)) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
+                // Υλοποίηση με Comparable - ΑΡΧΗ
+//            Comparable CompMax = (Comparable)max;
+//            Comparable CompItem = (Comparable)position.getItem();
+//            if (CompMax.compareTo(CompItem) < 0)
+                // Υλοποίηση με Comparable - ΤΕΛΟΣ
+                min = position.getItem();
+            // Εναλλακτικά μέσα στην if - ΑΡΧΗ
+//            if (((Comparable)max).compareTo((Comparable)position.getItem()) > 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
+//            if (((Student)min).compareTo((Student) position.getItem()) > 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+//                min = position.getItem();
+            // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
+            position = position.getNext();
+        }
+        return min;
+    } // End of function: minOfList()
     public Object maxOfList() {
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -107,7 +131,7 @@ public class LinkedList implements List {
         Node position = this.firstNode.getNext();
         while (position != null) {
             // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
-            if ((((String)max).compareTo(((String)position.getItem())) < 0))
+            if ((((Student)max).compareTo(((Student)position.getItem())) < 0)) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
                 // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
                 // Υλοποίηση με Comparable - ΑΡΧΗ
 //            Comparable CompMax = (Comparable)max;
@@ -117,7 +141,7 @@ public class LinkedList implements List {
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΑΡΧΗ
 //            if (((Comparable)max).compareTo((Comparable)position.getItem()) < 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
-            if (((String)max).compareTo((String) position.getItem()) < 0)
+            if (((Student)max).compareTo((Student) position.getItem()) < 0) // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
                 max = position.getItem();
             // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
             position = position.getNext();
@@ -138,7 +162,7 @@ public class LinkedList implements List {
     } // End of function: nodeExist()
     public LinkedList sortList() {
         Node traceNode, currentNode, minNode;
-        traceNode = this.getFirstNode();
+        traceNode = this.getFirstNode(); // Ap;o to traceNode και δεξιά η λίστα δεν είναι ταξινομημένη
         while (traceNode != null) {
             currentNode = traceNode;
             minNode = traceNode;
@@ -174,30 +198,6 @@ public class LinkedList implements List {
         } // End of while: currentNode
         return this;
     } // End of function: bubbleSort()
-    public Object minOfList() {
-        if (this.isEmpty())
-            throw new ListEmptyException(MSG_LIST_EMPTY);
-        Object min = this.firstNode.getItem();
-        Node position = this.firstNode.getNext();
-        while (position != null) {
-            // Υλοποίηση χωρίς Comparable - ΑΡΧΗ
-            if ((((String)min).compareTo(((String)position.getItem())) > 0))
-                // Υλοποίηση χωρίς Comparable - ΤΕΛΟΣ
-                // Υλοποίηση με Comparable - ΑΡΧΗ
-//            Comparable CompMax = (Comparable)max;
-//            Comparable CompItem = (Comparable)position.getItem();
-//            if (CompMax.compareTo(CompItem) < 0)
-                // Υλοποίηση με Comparable - ΤΕΛΟΣ
-                min = position.getItem();
-            // Εναλλακτικά μέσα στην if - ΑΡΧΗ
-//            if (((Comparable)max).compareTo((Comparable)position.getItem()) > 0) // Ο παρακάτω έλεγχος γίνεται και έτσι
-            if (((String)min).compareTo((String) position.getItem()) > 0)
-                min = position.getItem();
-            // Εναλλακτικά μέσα στην if - ΤΕΛΟΣ
-            position = position.getNext();
-        }
-        return min;
-    } // End of function: minOfList()
     public Object[] minMaxOfList() { // Επιστρέφει πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -206,4 +206,50 @@ public class LinkedList implements List {
         minMax[1] = this.maxOfList();
         return minMax;
     } // End of function: minMaxOfList()
+    public void minMaxOfListByRef(Object[] pin) { // Επιστρέφει ΜΕ ΑΝΑΦΟΡΑ πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        Object[] minMax = new Object[2];
+        pin[0] = this.minOfList();
+        pin[1] = this.maxOfList();
+    } // End of function: minMaxOfList()
+    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.3
+    public Object minGradeOfList() { // Πρέπει να επιστρέφει τον σπουδαστή και όχι μόνο τον βαθμό του
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        double minGrade = ((Student)this.firstNode.getItem()).getVathmos(); // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: Δεν χρειάζεται casting)
+        Object minStudent = this.firstNode.getItem();
+        Node position = this.firstNode.getNext();
+        while (position != null) {
+            if ((((Comparable<Double>)minGrade).compareTo(((Student)position.getItem()).getVathmos()) > 0)) {// <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+                minGrade = ((Student) position.getItem()).getVathmos();
+                minStudent = position.getItem();
+            }
+            position = position.getNext();
+        }
+        return minStudent;
+    } // End of function: minGradeOfList()
+    public Object maxGradeOfList() { // Πρέπει να επιστρέφει τον σπουδαστή και όχι μόνο τον βαθμό του
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        double maxGrade = ((Student)this.firstNode.getItem()).getVathmos(); // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: Δεν χρειάζεται casting)
+        Object maxStudent = this.firstNode.getItem();
+        Node position = this.firstNode.getNext();
+        while (position != null) {
+            if ((((Comparable<Double>)maxGrade).compareTo(((Student)position.getItem()).getVathmos()) < 0)) { // <--- Αλλαγή στο casting στον τύπο αντικειμένου που μας ενδιαφέρει (προεπιλεγμένο: String)
+                maxGrade = ((Student) position.getItem()).getVathmos();
+                maxStudent = position.getItem();
+            }
+            position = position.getNext();
+        }
+        return maxStudent;
+    } // End of function: maxGradeOfList()
+    public Object[] minMaxGradeOfList() { // Επιστρέφει πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        Object[] minMax = new Object[2];
+        minMax[0] = this.minGradeOfList();
+        minMax[1] = this.maxGradeOfList();
+        return minMax;
+    } // End of function: minMaxGradeOfList()
 }
