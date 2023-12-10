@@ -1,7 +1,10 @@
-// ΑΣΚΗΣΗ 3.3
+// ΑΣΚΗΣΗ 3.4
 public class Main {
     public static void main(String[] args) {
-        // Τα παρακάτω είναι από την Άσκηση 3.3
+        // Τα παρακάτω είναι από την Άσκηση 3.4
+        StudentsLinkedList studentsList = new StudentsLinkedList();
+        studentsList = ListManagement.manageList(studentsList);
+/*
         StudentsLinkedList studentsList = new StudentsLinkedList();
         System.out.println("List size: " + studentsList.getSize());
         studentsList.insertLast(new Student(2022005, "Panos", "Alevropoulos", 47, 'Α', 5, 2));
@@ -25,8 +28,7 @@ public class Main {
         Object[] tmp;
         tmp = studentsList.minMaxGradeOfList();
         System.out.println("List min---: " + tmp[0]  + "\n...by using function: minMaxGradeOfList(),\nList max...: " + tmp[1] + "\n...by using function: minMaxGradeOfList().");
-
-
+*/
         // Τα παρακάτω είναι από την Άσκηση 3.2
 /*
         LinkedList L1 = new LinkedList();
