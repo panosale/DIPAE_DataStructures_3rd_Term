@@ -17,6 +17,7 @@ public class Main {
             System.out.println();
             System.out.println("Full list: ");
             L1.printList();
+            System.out.println();
             System.out.println("Sorted full list: ");
             L1 = (ListSort) L1.sortList();
             L1.printList();

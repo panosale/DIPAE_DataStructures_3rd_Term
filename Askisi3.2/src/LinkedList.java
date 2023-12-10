@@ -96,7 +96,7 @@ public class LinkedList implements List {
                 System.out.println(currentNode.item.toString() + " ");
                 currentNode = currentNode.next;
             }
-            System.out.println("\n");
+//            System.out.println();
         }
     }
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.2
