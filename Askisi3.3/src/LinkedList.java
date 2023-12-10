@@ -196,6 +196,7 @@ public class LinkedList implements List {
         } // End of while: currentNode
         return this;
     } // End of function: bubbleSort()
+    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.3
     public Object[] minMaxOfList() { // Επιστρέφει πίνακα δυο θέσεων που περιέχει την ελάχιστη και μέγιστη τιμή που θα βρει στη λίστα
         if (this.isEmpty())
             throw new ListEmptyException(MSG_LIST_EMPTY);
@@ -211,5 +212,4 @@ public class LinkedList implements List {
         pin[0] = this.minOfList();
         pin[1] = this.maxOfList();
     } // End of function: minMaxOfList()
-    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 3.3
 }
