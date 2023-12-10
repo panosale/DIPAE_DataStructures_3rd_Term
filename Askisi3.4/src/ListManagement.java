@@ -73,8 +73,8 @@ public class ListManagement {
         String promptGenderSuffix = "";
         System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτριας (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
         char studentGender = UserInput.getChar();
-        // ΕΛΕΓΧΟΣ ΣΤΟ ΠΑΡΑΚΑΤΩ. ΚΑΤΙ ΔΕΝ ΛΕΙΤΟΥΡΓΕΙ ΣΩΣΤΑ
-        if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'm' || studentGender == 'M') {
+        // ΕΛΕΓΧΟΣ ΣΤΟ ΠΑΡΑΚΑΤΩ. ΚΑΤΙ ΔΕ ΛΕΙΤΟΥΡΓΕΙ ΣΩΣΤΑ
+        if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'A' || studentGender == 'a' || studentGender == 'Μ' || studentGender == 'M' || studentGender == 'm' ) {
             promptGenderSuffix = "του φοιτητή: ";
             tmpStudent.setFylo('Α');
         }
