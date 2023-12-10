@@ -9,6 +9,7 @@ public class Main {
         studentsList.insertLast(new Student(333, "Γεώργιος", "Βασιλειάδης", 19, 'Α', 3.3, 3));
         studentsList.insertLast(new Student(444, "Ελένη", "Παπαδοπούλου", 20, 'Θ', 4.5, 2));
         studentsList.insertFirst(new Student(888, "Αλεξάνδρα", "Παπανίκα", 19, 'Θ', 3.1, 1));
+        studentsList.bubbleSort();
         System.out.println("List size: " + studentsList.getSize());
         System.out.println("Full list: ");
         studentsList.printList();
