@@ -16,7 +16,7 @@ public class ListManagement {
             System.out.println("6. Is the List Empty?");
             System.out.println("7. Print List");
             System.out.println("8. Sort List");
-            System.out.println("0. Έξοδος");
+            System.out.println("0. Exit");
             System.out.print("Insert you choice: ");
             userSelection = UserInput.getInteger();
             switch (userSelection) {
