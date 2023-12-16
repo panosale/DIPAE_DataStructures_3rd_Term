@@ -31,11 +31,13 @@ public class Management {
         String promptGenderSuffix = "";
         System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτριας (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
         char studentGender = UserInput.getChar();
-        if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'm' || studentGender == 'M') {
+        // ΤΟ ΠΑΡΑΚΑΤΩ ΓΙΝΕΤΑΙ ΚΑΙ ΜΕ ΔΙΑΦΟΡΕΤΙΚΟ ΤΡΟΠΟ; π.χ ΜΕ ΛΙΣΤΑ;
+        if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'A' || studentGender == 'a' || studentGender == 'Μ' || studentGender == 'M' || studentGender == 'm' ) {
             promptGenderSuffix = "του φοιτητή: ";
             tmpStudent.setFylo('Α');
         }
         else
+            // ΤΟ ΠΑΡΑΚΑΤΩ ΓΙΝΕΤΑΙ ΚΑΙ ΜΕ ΔΙΑΦΟΡΕΤΙΚΟ ΤΡΟΠΟ; π.χ ΜΕ ΛΙΣΤΑ;
             if (studentGender == 'Γ' || studentGender == 'γ' || studentGender == 'Θ' || studentGender == 'θ' || studentGender == 'F' || studentGender == 'f') {
                 promptGenderSuffix = "της φοιτήτριας: ";
                 tmpStudent.setFylo('Γ');

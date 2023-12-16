@@ -199,6 +199,12 @@ public class LinkedList implements List {
         return found;
     } // End of function: nodeExist()
     public LinkedList sortList() {
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        if (this.getSize() == 1) {
+            System.out.println("Η λίστα έχει μέγεθος 1. Δεν χρειάζεται ταξινόμηση.");
+            return this;
+        }
         Node traceNode, currentNode, minNode;
         traceNode = this.getFirstNode(); // Ap;o to traceNode και δεξιά η λίστα δεν είναι ταξινομημένη
         while (traceNode != null) {
@@ -219,6 +225,12 @@ public class LinkedList implements List {
         return this;
     } // End of function: sortList()
     public LinkedList bubbleSort() {
+        if (this.isEmpty())
+            throw new ListEmptyException(MSG_LIST_EMPTY);
+        if (this.getSize() == 1) {
+            System.out.println("Η λίστα έχει μέγεθος 1. Δεν χρειάζεται ταξινόμηση.");
+            return this;
+        }
         Node currentNode = this.getFirstNode();
         while (currentNode != null) {
             Node secondNode = currentNode.getNext();

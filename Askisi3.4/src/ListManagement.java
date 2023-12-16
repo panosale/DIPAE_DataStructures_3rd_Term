@@ -59,12 +59,14 @@ public class ListManagement {
                 }
                 case 8 -> {
                     System.out.println("SORTING THE LIST...");
-                    tmp_studentsList.sortList();
+                    tmp_studentsList.bubbleSort();
                     System.out.println("...DONE");
                 }
                 case 0 -> System.out.println("Bye bye...");
                 default -> System.out.println("Wrong choice!");
             }
+            System.out.println();
+            System.out.println();
         } while (userSelection != 0);
         return tmp_studentsList;
     }
@@ -73,12 +75,13 @@ public class ListManagement {
         String promptGenderSuffix = "";
         System.out.print("Δώσε το φύλο του φοιτητή/της φοιτήτριας (Άνδρας= Α ή M, Γυναίκα= Γ ή Θ ή F): ");
         char studentGender = UserInput.getChar();
-        // ΕΛΕΓΧΟΣ ΣΤΟ ΠΑΡΑΚΑΤΩ. ΚΑΤΙ ΔΕ ΛΕΙΤΟΥΡΓΕΙ ΣΩΣΤΑ
+        // ΤΟ ΠΑΡΑΚΑΤΩ ΓΙΝΕΤΑΙ ΚΑΙ ΜΕ ΔΙΑΦΟΡΕΤΙΚΟ ΤΡΟΠΟ; π.χ ΜΕ ΛΙΣΤΑ;
         if (studentGender == 'Α' || studentGender == 'α' || studentGender == 'A' || studentGender == 'a' || studentGender == 'Μ' || studentGender == 'M' || studentGender == 'm' ) {
             promptGenderSuffix = "του φοιτητή: ";
             tmpStudent.setFylo('Α');
         }
         else
+            // ΤΟ ΠΑΡΑΚΑΤΩ ΓΙΝΕΤΑΙ ΚΑΙ ΜΕ ΔΙΑΦΟΡΕΤΙΚΟ ΤΡΟΠΟ; π.χ ΜΕ ΛΙΣΤΑ;
             if (studentGender == 'Γ' || studentGender == 'γ' || studentGender == 'Θ' || studentGender == 'θ' || studentGender == 'F' || studentGender == 'f') {
                 promptGenderSuffix = "της φοιτήτριας: ";
                 tmpStudent.setFylo('Γ');

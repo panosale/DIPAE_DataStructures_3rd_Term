@@ -1,3 +1,4 @@
+// ΤΟ ΠΑΡΑΚΑΤΩ ΔΕ ΧΡΕΙΑΖΕΤΑΙ ΑΦΟΥ Η sort ΕΧΕΙ ΕΝΣΩΜΑΤΩΘΕΙ ΣΤΗΝ ΑΡΧΙΚΗ ΚΛΑΣΗ LinkedList
 public class ListSort extends LinkedList {
     public ListSort() {
         super();
