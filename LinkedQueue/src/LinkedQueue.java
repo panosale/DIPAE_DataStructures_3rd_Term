@@ -12,6 +12,7 @@ public class LinkedQueue implements Queue {
         return Q.getSize();
     } // End of function: getQueueSize()
     public Object frontQueueElement() throws QueueEmptyException {
+        // Ή διαφορετικά: public Item get() [ίδια με την public Object dequeueElement();]
         // Επιστρέφει το στοιχείο που βρίσκεται στο μπροστά μέρος της Συνδεδεμένης Ουράς
         if (Q.isEmpty())
             throw new QueueEmptyException(MSG_QUEUE_EMPTY);
@@ -20,11 +21,13 @@ public class LinkedQueue implements Queue {
         return temp;
     } // End of function: frontQueueElement()
     public void enqueueElement(Object item) throws QueueFullException {
-        // Εισάγει ένα νέο στοιχείο στο πίσω μέρος της Συνδεδεμένης Ουράς
+        // Ή διαφορετικά: public void put(Item item)
+        // Εισάγει ένα νέο στοιχείο στο τέλος της Συνδεδεμένης Ουράς
         Q.insertLast(item);
     } // End of function: enqueueElement()
     public Object dequeueElement() throws QueueEmptyException {
-        // Εξάγει και επιστρέφει το στοιχείο που βρίσκεται στο εμπρός μέρος της Συνδεδεμένης Ουράς
+        // Ή διαφορετικά: public Item get()
+        // Εξάγει και επιστρέφει το πρώτο στοιχείο της Συνδεδεμένης Ουράς
         try {
             return Q.removeFirst();
         }
