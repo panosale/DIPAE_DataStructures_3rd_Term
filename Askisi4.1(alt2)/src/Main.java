@@ -1,8 +1,8 @@
-// Άσκηση 2.3. Έλεγχος παρενθέσεων
-// Παράδειγμα στοίβας σε Java
+// Άσκηση 4.1 Έλεγχος παρενθέσεων
+// Παράδειγμα Στοίβας με υλοποίηση Συνδεδεμένης Λίστας σε Java
 public class Main {
     public static boolean simpleBracketsCheck(String expression) {
-        ArrayStack checkStack = new ArrayStack(expression.length());
+        LinkedStack2 checkStack = new LinkedStack2();
         char charToCheck;
         for (int i = 0; i < expression.length(); i++) {
             charToCheck = expression.charAt(i);
@@ -27,7 +27,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        System.out.println("***** Άσκηση 2.3. Έλεγχος παρενθέσεων *****");
+        System.out.println("***** Άσκηση 4.1. Έλεγχος παρενθέσεων με τη χρήση Στοίβας με υλοποίηση Συνδεδεμένης Λίστας *****");
         String sentenceToCheck1 = "(x + y) + 3(x - y) - 2(3x + y)";
         simpleBracketsCheck(sentenceToCheck1);
         sentenceToCheck1 = "(x + y)) + 3(x - y) - 2(3x + y)";
