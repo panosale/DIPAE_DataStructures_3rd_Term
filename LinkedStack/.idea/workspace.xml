@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3286cee-fa47-4834-8cd7-0bb58a80efad" name="Changes" comment="" />
+    <list default="true" id="f3286cee-fa47-4834-8cd7-0bb58a80efad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../LinkedQueue/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/ArrayStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/LinkedStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/ListEmptyException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/StackEmptyException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/StackFullException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LinkedStack/StackHandleExceptions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinkedStack2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinkedStack3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Queue/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stack/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,16 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/panagiotis/Documents/GitHub/DIPAE_DataStructures_3rd_Term/LinkedStack"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/panagiotis/Documents/GitHub/DIPAE_DataStructures_3rd_Term/LinkedStack&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
