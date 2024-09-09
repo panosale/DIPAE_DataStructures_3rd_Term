@@ -14,33 +14,33 @@ public class ArrayQueue implements Queue{
         this.queueCapacity = newCapacity;
         Q = new Object[this.queueCapacity];
     }
-    public int getQueueSize() {
+    public int size() {
         // Επιστρέφει το μέγεθος της Ουράς
         return (this.lastElement - this.firstElement);
     }
     public int getMaxQueueCapacity() {
         return this.queueCapacity;
     }
-    public boolean queueIsEmpty() {
+    public boolean isEmpty() {
         // Επιστρέφει true αν η Ουρά είναι κενή
         return (this.firstElement == this.lastElement);
     }
-    public Object frontQueueElement() throws QueueEmptyException {
+    public Object front() throws QueueEmptyException {
         // Επιστρέφει το στοιχείο που βρίσκεται στο μπροστά μέρος της Ουράς
-        if (this.queueIsEmpty())
+        if (this.isEmpty())
             throw new QueueEmptyException(MSG_QUEUE_EMPTY);
         return this.Q[this.firstElement];
     }
-    public void enqueueElement(Object item) throws QueueFullException {
+    public void enqueue(Object item) throws QueueFullException {
         // Εισάγει ένα νέο στοιχείο στο πίσω μέρος της Ουράς
         if (this.lastElement == this.queueCapacity) // Εικονική υπερχείλιση??
             throw new QueueFullException(MSG_QUEUE_FULL);
         this.Q[lastElement++] = item; // ΠΡΟΣΟΧΗ! Πρώτα αυξάνει το last και μετά εισάγει το στοιχείο (item) στον πίνακα
     }
-    public Object dequeueElement() throws QueueEmptyException {
+    public Object dequeue() throws QueueEmptyException {
         // Εξάγει και επιστρέφει το στοιχείο που βρίσκεται στο εμπρός μέρος της Ουράς
         Object tmpElement;
-        if (this.queueIsEmpty())
+        if (this.isEmpty())
             throw new QueueEmptyException(MSG_QUEUE_EMPTY);
         tmpElement = this.Q[firstElement];
         this.Q[firstElement++] = null; // ΠΡΟΣΟΧΗ! Πρώτα θέτει null στη θέση του firstElement για τον garbage collector (εκκαθάριση της μνήμης από τα "σκουπίδια") και μετά το αυξάνει
