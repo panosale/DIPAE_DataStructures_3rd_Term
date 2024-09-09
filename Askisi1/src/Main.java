@@ -39,7 +39,7 @@ public class Main {
         am2Search = 11333;
         System.out.println("***** Αναζήτηση φοιτητή με ΑΜ: " + am2Search);
         System.out.println(lab1.searchStudent(am2Search));
-        System.out.println("***** Διαγραφή φοιτητή [" + st3.getLastName() + " " + st3.getFirstName() + "] από το εργαστήριο: " + lab1.getLabName());
+        System.out.println("***** Διαγραφή φοιτητή [" + st3.getEpitheto() + " " + st3.getOnoma() + "] από το εργαστήριο: " + lab1.getLabName());
         lab1.deleteStudent(st3);
         System.out.println("***** Εκτύπωση παρουσιολογίου εργαστηρίου:" + lab1.getLabName());
         lab1.parousiologio();

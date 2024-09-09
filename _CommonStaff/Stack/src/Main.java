@@ -5,24 +5,24 @@ public class Main {
         Object tmpObj = new Object();
         ArrayStack testStack = new ArrayStack(3);
         System.out.println("***** Maximum Stack size is: " + testStack.getMaxStackCapacity());
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        System.out.println("Current Stack size is: " + testStack.size());
         System.out.println("Pushing a new element in Stack.");
-        testStack.pushStackElement(tmpObj);
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        testStack.push(tmpObj);
+        System.out.println("Current Stack size is: " + testStack.size());
         System.out.println("Pushing a new element in Stack.");
-        testStack.pushStackElement(tmpObj);
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        testStack.push(tmpObj);
+        System.out.println("Current Stack size is: " + testStack.size());
         System.out.println("Pushing a new element in Stack.");
-        testStack.pushStackElement(tmpObj);
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        testStack.push(tmpObj);
+        System.out.println("Current Stack size is: " + testStack.size());
         System.out.println("Popping element from Stack.");
-        tmpObj = testStack.popStackElement();
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        tmpObj = testStack.pop();
+        System.out.println("Current Stack size is: " + testStack.size());
         System.out.println("Pushing a new element in Stack.");
-        testStack.pushStackElement(tmpObj);
-        System.out.println("Current Stack size is: " + testStack.getStackSize());
+        testStack.push(tmpObj);
+        System.out.println("Current Stack size is: " + testStack.size());
 //        System.out.println("Popping element from stack.");
-//        tmpObj = testStack.popStackElement();
+//        tmpObj = testStack.pop();
 //        System.out.println("Current stack size is: " + testStack.getStackSize());
         }
     }

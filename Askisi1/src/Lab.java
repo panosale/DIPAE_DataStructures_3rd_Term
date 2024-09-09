@@ -7,16 +7,16 @@ public class Lab implements LabInterface{
     public Lab() {
         // Default constructor
     }
+    public Lab(String newLabName) {
+        // Semi constructor
+        this(newLabName, 20); // Default capacity given here
+    }
     public Lab(String newLabName, int newLabCapacity) {
         // Full constructor
         this.labName = newLabName;
         this.labCapacity = newLabCapacity;
         labArray = new Student[newLabCapacity];
         System.out.println("Το εργαστήριο '" + newLabName + "', με χωρητικότητα " + newLabCapacity + " ατόμων δημιουργήθηκε με επιτυχία.");
-    }
-    public Lab(String newLabName) {
-        // Semi constructor
-        this(newLabName, 20); // Default capacity given here
     }
 
     // Setters-Getters
@@ -26,23 +26,18 @@ public class Lab implements LabInterface{
     public String getLabName() {
         return this.labName;
     }
-
     public void setLabCapacity(int newLabCapacity) {
         this.labCapacity = newLabCapacity;
     }
-
     public int getLabCapacity() {
         return this.labCapacity;
     }
-
     public void setLabCurrentSize(int newLabCurrentSize) {
         this.labCurrentSize = newLabCurrentSize;
     }
-
     public int getLabCurrentSize() {
         return this.labCurrentSize;
     }
-
     public void getLabArray() {
         for (int i = 0; i < this.labCurrentSize; i++)
             System.out.println("Φοιτητής [" + (i+1) + "]: \n" + this.labArray[i].toString() + "\n");
@@ -68,9 +63,9 @@ public class Lab implements LabInterface{
         // Διαγραφή φοιτητή από το τμήμα
         for (int i = 0; i < this.labCurrentSize; i++)
             if (this.labArray[i] == std) // Αν ο φοιτητής που θέλω να διαγράψω βρεθεί στη θέση i τότε ...
-            { //... μεταφέρω στη θέση i τον φοιτητή από την τελευταία θέση του πίνακα μειώνω το μέγεθος του πίνακα κατά 1 ...
+            { //...μειώνω πρώτα (ΠΡΟΣΟΧΗ!) το μέγεθος του πίνακα κατά 1, μεταφέρω στη θέση i τον φοιτητή από την τελευταία θέση του πίνακα...
                 this.labArray[i] = this.labArray[--this.labCurrentSize];
-                return true; // ... και επιστρέφω true (έγινε η αφαίρεση)
+                return true; // ... και επιστρέφω true (έγινε η αφαίρεση).
             }
         return false; // Αν δεν βρεθεί φοιτητής επιστρέφω false.
     }
@@ -86,7 +81,7 @@ public class Lab implements LabInterface{
     public void parousiologio() {
         // Εκτύπωση του παρουσιολογίου του τμήματος
         for (int i = 0; i < this.labCurrentSize; i++) {
-            System.out.println("Φοιτητής: " + this.labArray[i].getAM() + ", " + this.labArray[i].getLastName() + " " + this.labArray[i].getFirstName()
+            System.out.println("Φοιτητής: " + this.labArray[i].getAM() + ", " + this.labArray[i].getEpitheto() + " " + this.labArray[i].getOnoma()
                     + ". Απουσίες: " + this.labArray[i].getArithmosApousion() + ". Βαθμός: " + this.labArray[i].getVathmos());
         }
     }

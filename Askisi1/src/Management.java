@@ -9,6 +9,7 @@ public class Management {
             System.out.println("1. Εισαγωγή νέου φοιτητή και προσθήκη σε εργαστήριο");
             System.out.println("2. Αναζήτηση φοιτητή με ΑΜ");
             System.out.println("3. Διαγραφή φοιτητή");
+            System.out.println("4. Εμφάνιση φοιτητών εργαστηρίου");
             System.out.println("0. Έξοδος");
             System.out.print("Παρακαλώ επίλεξε εργασία: ");
             userSelection = UserInput.getInteger();
@@ -21,6 +22,7 @@ public class Management {
                 }
                 case 2 -> System.out.println("you seletced 2\n");
                 case 3 -> System.out.println("you seletced 3\n");
+                case 4 -> System.out.println("you seletced 4\n");
                 case 0 -> System.out.println("Bye bye...");
                 default -> System.out.println("Προσοχή! Λάθος επιλογή!");
             }
@@ -49,9 +51,9 @@ public class Management {
         System.out.print("Δώσε τον Αριθμό Μητρώου " + promptGenderSuffix);
             tmpStudent.setAM(UserInput.getInteger());
         System.out.print("Δώσε το Όνομα " + promptGenderSuffix);
-            tmpStudent.setFirstName(UserInput.getString());
+            tmpStudent.setOnoma(UserInput.getString());
         System.out.print("Δώσε το Επίθετο " + promptGenderSuffix);
-            tmpStudent.setLastName(UserInput.getString());
+            tmpStudent.setEpitheto(UserInput.getString());
         System.out.print("Δώσε τη Ηλικία " + promptGenderSuffix);
             tmpStudent.setHlikia(UserInput.getInteger());
         System.out.print("Δώσε τον Βαθμό " + promptGenderSuffix);
