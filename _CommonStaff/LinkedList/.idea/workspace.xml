@@ -4,24 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c6eccda-1365-41c8-8dae-2407fd71bc7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Askisi3.4/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi3.4/src/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Askisi3.4/src/ListManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi3.4/src/ListManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ListSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListSort.java" afterDir="false" />
-    </list>
+    <list default="true" id="1c6eccda-1365-41c8-8dae-2407fd71bc7d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "panosale"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/panosale/DIPAE_DataStructures_3rd_Term.git",
+    "accountId": "1f3796fe-1050-44cc-9c81-324c3a5e23f3"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ZBjTSS62v9xDdqkZ3UzqiaU3ZU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,16 +40,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/panagiotis/Documents/GitHub/DIPAE_DataStructures_3rd_Term/LinkedList"
+    "last_opened_file_path": "F:/Common/Programming/GitHub/DIPAE_DataStructures_3rd_Term/_CommonStaff/LinkedList"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-cc9f59e6" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

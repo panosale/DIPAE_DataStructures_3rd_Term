@@ -18,7 +18,7 @@ public class LinkedStack implements Stack {
     public boolean stackIsFull() { // TODO: ΝΑ ΤΗΝ ΠΡΟΣΘΕΣΩ ΣΕ ΟΛΕΣ ΤΙΣ ΚΛΑΣΕΙΣ Stack ΠΟΥ ΕΧΩ ΔΗΜΙΟΥΡΓΗΣΕΙ
         // Ή διαφορετικά: public boolean isFull()
         // Επιστρέφει true αν η Συνδεδεμένη Στοίβα είναι πλήρης
-        return false; // Επιστρέφει true (η λίστα είναι κενή) αν ο πρώτος κόμβος είναι null // TODO: ΝΑ ΕΛΕΓΞΩ ΠΩΣ ΕΠΙΣΤΡΕΦΕΙ ΤΟ ΑΠΟΤΕΛΕΣΜΑ
+        return (S.getFirstNode() == null); // Επιστρέφει true (η λίστα είναι κενή) αν ο πρώτος κόμβος είναι null // TODO: ΝΑ ΕΛΕΓΞΩ ΠΩΣ ΕΠΙΣΤΡΕΦΕΙ ΤΟ ΑΠΟΤΕΛΕΣΜΑ
     } // End of function: stackIsFull()
     public void pushStackElement(Object item) throws StackFullException {
         // Ή διαφορετικά: public void push(Item item)

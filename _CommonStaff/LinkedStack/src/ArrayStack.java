@@ -1,3 +1,4 @@
+// ΔΕΝ ΧΡΗΣΙΜΟΠΟΙΕΙΤΑΙ ΑΥΤΉ Η ΚΛΑΣΗ ΣΤΗΝ ΥΛΟΠΟΙΗΣΗ ΜΕ ΣΥΝΔΕΔΕΜΕΝΗ ΛΙΣΤΑ
 abstract class ArrayStack implements Stack { // TODO: ΔΕΝ ΧΡΗΣΙΜΟΠΟΙΕΙΤΑΙ ΠΟΥΘΕΝΑ. ΝΑ ΕΛΕΧΘΕΙ ΚΑΙ ΝΑ ΔΙΑΓΡΑΦΕΙ
     private int stackCapacity;
     private Object[] S;

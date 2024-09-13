@@ -90,6 +90,7 @@ public class LinkedList implements List {
     public void printList() {
         if (this.isEmpty())
             System.out.println(MSG_LIST_EMPTY); // Γιατί όχι το? -> throw new ListEmptyException(MSG_LIST_EMPTY);
+            // Προφανώς για να μην σταματάει το πρόγραμμα μόνο και μόνο για την προβολή της κενής λίστας
         else {
             Node currentNode = this.firstNode;
             while (currentNode != null) {
@@ -206,7 +207,7 @@ public class LinkedList implements List {
             return this;
         }
         Node traceNode, currentNode, minNode;
-        traceNode = this.getFirstNode(); // Ap;o to traceNode και δεξιά η λίστα δεν είναι ταξινομημένη
+        traceNode = this.getFirstNode(); // Από το traceNode και δεξιά η λίστα δεν είναι ταξινομημένη
         while (traceNode != null) {
             currentNode = traceNode;
             minNode = traceNode;

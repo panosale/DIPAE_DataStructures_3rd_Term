@@ -1,4 +1,5 @@
-public class ArrayQueue implements Queue{
+// ΔΕΝ ΧΡΗΣΙΜΟΠΟΙΕΙΤΑΙ ΑΥΤΉ Η ΚΛΑΣΗ ΣΤΗΝ ΥΛΟΠΟΙΗΣΗ ΜΕ ΣΥΝΔΕΔΕΜΕΝΗ ΛΙΣΤΑ
+public class ArrayQueue implements Queue { // TODO: ΔΕΝ ΧΡΗΣΙΜΟΠΟΙΕΙΤΑΙ ΠΟΥΘΕΝΑ. ΝΑ ΕΛΕΧΘΕΙ ΚΑΙ ΝΑ ΔΙΑΓΡΑΦΕΙ
     private int queueCapacity;
     private Object[] Q;
     private int firstElement = 0;
