@@ -1,5 +1,3 @@
-import javax.swing.tree.TreeCellRenderer;
-
 public class  BSTree {
     private TreeNode root;
     public BSTree() { // Default constructor
@@ -29,52 +27,52 @@ public class  BSTree {
         }
     } // End of function: insertNode()
     // ΕΝΘΕΜΑΤΙΚΗ ΔΙΕΛΕΥΣΗ (InOrderTraversal) ΑΠΟ ΤΟΥΣ ΚΟΜΒΟΥΣ ΤΟΥ ΔΥΑΔΙΚΟΥ ΔΕΝΤΡΟΥ
-    public void InOrderTraversal() {
+    public void inOrderTraversal() {
         inOrder(root);
-    } // End of function: InOrderTraversal()
+    } // End of function: inOrderTraversal()
     private void inOrder(TreeNode node) {
         if (node == null)
             return;
         inOrder(node.getLeftNode());
-        System.out.println(node.getNodeData() + " "); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
+        System.out.print(node.getNodeData() + "|"); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
         inOrder(node.getRightNode());
     } // End of function: inOrder()
     // ΠΡΟΘΕΜΑΤΙΚΗ ΔΙΕΛΕΥΣΗ (PreOrderTraversal) ΑΠΟ ΤΟΥΣ ΚΟΜΒΟΥΣ ΤΟΥ ΔΥΑΔΙΚΟΥ ΔΕΝΤΡΟΥ
-    public void PreOrderTraversal() {
+    public void preOrderTraversal() {
         preOrder(root);
-    } // End of function: PreOrderTraversal()
+    } // End of function: preOrderTraversal()
     private void preOrder(TreeNode node) {
         if (node == null)
             return;
-        System.out.println(node.getNodeData() + " "); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
+        System.out.print(node.getNodeData() + "|"); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
         preOrder(node.getLeftNode());
         preOrder(node.getRightNode());
     } // End of function: preOrder()
     // ΕΠΙΘΕΜΑΤΙΚΗ/ΜΕΤΑΘΕΜΑΤΙΚΗ ΔΙΕΛΕΥΣΗ (PostOrderTraversal) ΑΠΟ ΤΟΥΣ ΚΟΜΒΟΥΣ ΤΟΥ ΔΥΑΔΙΚΟΥ ΔΕΝΤΡΟΥ
-    public void PostOrderTraversal() {
-        preOrder(root);
-    } // End of function: PostOrderTraversal()
+    public void postOrderTraversal() {
+        postOrder(root);
+    } // End of function: postOrderTraversal()
     private void postOrder(TreeNode node) {
         if (node == null)
             return;
         postOrder(node.getLeftNode());
         postOrder(node.getRightNode());
-        System.out.println(node.getNodeData() + " "); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
+        System.out.print(node.getNodeData() + "|"); // <--- ΠΡΟΣΟΧΗ ΕΔΩ!
     } // End of function: postOrder()
     // ΔΥΑΔΙΚΑ ΔΕΝΤΡΑ
-    public int countNodes() { // ΜΕΤΡΗΣΗ ΤΝ ΚΟΜΒΩΝ/ΑΚΜΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
+    public int countNodes() { // ΜΕΤΡΗΣΗ ΤΩΝ ΚΟΜΒΩΝ/ΑΚΜΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
         return countNodes(root);
     } // End of function: countNodes()
     private int countNodes(TreeNode node) {
         if (node == null)
             return 0;
         else
-            return countNodes(node.getLeftNode()) + countNodes(node.getRightNode()) + 1;
+            return (countNodes(node.getLeftNode()) + countNodes(node.getRightNode()) + 1);
     } // End of function: countNodes()
     public int countLeafs() { // ΜΕΤΡΗΣΗ ΤΩΝ ΦΥΛΩΝ/ΚΟΡΥΦΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
         return countLeafs(root);
     } // End of function: countLeafs()
-    private int countLeafs(TreeNode node) { // ΜΕΤΡΗΣΗ ΤΩΝ ΦΥΛΩΝ/ΚΟΡΥΦΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
+    private int countLeafs(TreeNode node) { // ΜΕΤΡΗΣΗ ΤΩΝ ΦΥΛΛΩΝ/ΚΟΡΥΦΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
         if (node == null)
             return 0;
         else {

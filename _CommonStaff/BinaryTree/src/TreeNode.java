@@ -7,7 +7,7 @@ public class TreeNode {
         left = right = null;
     } // End of: Default constructor
     // Getters & Setters
-    public void setNodeData(int newItem) {
+    public void setNodeData(char newItem) {
         this.item = newItem;
     } // End of function: setNodeData()
     public int getNodeData() {
