@@ -86,27 +86,40 @@ public class  BSTree  {
             return count;
         }
     } // End of function: countLeafs()
-    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5.1
+    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5.2
     public int numberOfNodes() {
         int numOfNodes = this.countNodes();
         return (numOfNodes);
     } // End of function: numberOfNodes()
     public int treeHeight() {
         return (treeHeight(root));
-    } // End of function: public treeHeight()
+    } // End of function: public treeHeight() ver1
     private int treeHeight(TreeNode node) {
         if (node == null)
             return -1;
         return 1+ Math.max(treeHeight(node.getLeftNode()), treeHeight(node.getRightNode()));
-    } // End of function: private treeHeight()
+    } // End of function: private treeHeight() ver1
     public boolean search(Object data) {
         return (search(root, data));
     } // End of function: public search()
     private boolean search(TreeNode node, Object data) {
+        if (node == null)
+            return false;
         if (node.getNodeData() == data)
             return true;
         if (search(node.getLeftNode(), data))
             return true;
         return search(node.getRightNode(), data);
     } // End of function: private search()
+    public int treeHeight(Object data) {
+        if (search(data)) return (treeHeight(root, data));
+        return -1;
+    } // End of function: public treeHeight() ver2
+    private int treeHeight(TreeNode node, Object data) {
+        if (node.getNodeData() == data)
+            return 0;
+        if (((Comparable)data).compareTo(node.getNodeData()) < 0)
+            return (treeHeight(node.getLeftNode(), data) + 1);
+        return (treeHeight(node.getRightNode()) + 1);
+    } // End of function: private treeHeight() ver2
 }

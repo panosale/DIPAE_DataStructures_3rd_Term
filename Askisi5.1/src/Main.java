@@ -25,5 +25,9 @@ public class Main {
         System.out.println();
         System.out.println("Number of nodes: " + myTree.numberOfNodes());
         System.out.println("Height of the tree: " + myTree.treeHeight());
+        int data2search = 18;
+        System.out.println(data2search + " was found in BStree: " + myTree.search(data2search) + ". In level: " + myTree.treeHeight(data2search));
+        data2search = 99;
+        System.out.println(data2search + " was found in BStree: " + myTree.search(data2search) + ". In level: " + myTree.treeHeight(data2search));
     }
 }
