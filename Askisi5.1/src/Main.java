@@ -5,20 +5,14 @@ public class Main {
         BSTree myTree = new BSTree();
         System.out.println("*** Initial total nodes of this BSTree are: " + myTree.countNodes());
         System.out.println("*** Initial total leafs of this BSTree are: " + myTree.countLeafs());
+        // ΓΕΜΙΣΜΑ ΜΕ ΤΥΧΑΙΟΥΣ ΑΡΙΘΜΟΥΣ
 //        int max = 7;
 //        for (int i = 0; i < max; i++)
 //            myTree.insertElement((int)(Math.random()*max*10));
-        myTree.insertElement(40);
-        myTree.insertElement(15);
-        myTree.insertElement(25);
-        myTree.insertElement(50);
-        myTree.insertElement(20);
-        myTree.insertElement(10);
-        myTree.insertElement(70);
-        myTree.insertElement(55);
-        myTree.insertElement(45);
-        myTree.insertElement(5);
-        myTree.insertElement(18);
+        int pin[] = {40, 15, 25, 50, 20, 10, 70, 55, 45, 5, 18};
+        for (int i = 0; i < pin.length; i++)
+            myTree.insertElement(pin[i]);
+
         System.out.println("*** New elements have been inserted.");
         System.out.println("*** Total nodes of this BSTree are: " + myTree.countNodes());
         System.out.println("*** Total leafs of this BSTree are: " + myTree.countLeafs());

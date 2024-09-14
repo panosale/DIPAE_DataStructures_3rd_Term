@@ -7,9 +7,9 @@ public class TreeNode {
         left = right = null;
     } // End of: Default constructor
     // Getters & Setters
-    public void setNodeData(Object newItem) {
-        this.item = newItem;
-    } // End of function: setNodeData()
+    public void setNodeData(Object newItem) { // ΔΕΝ ΧΡΕΙΑΖΕΤΑΙ. ΓΙΑ ΔΙΑΓΡΑΦΗ?
+        this.item = newItem; // ΔΕΝ ΧΡΕΙΑΖΕΤΑΙ. ΓΙΑ ΔΙΑΓΡΑΦΗ?
+    } // End of function: setNodeData() // ΔΕΝ ΧΡΕΙΑΖΕΤΑΙ. ΓΙΑ ΔΙΑΓΡΑΦΗ?
     public Object getNodeData() {
         return this.item;
     } // End of function: getNodeData()

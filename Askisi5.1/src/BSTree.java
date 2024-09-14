@@ -14,7 +14,7 @@ public class  BSTree  {
     } // End of function: insertElement()
     private void insertNode(Object newData, TreeNode newNode) {
         // TODO: ΝΑ ΕΠΙΒΕΒΑΙΩΣΩ ΤΑ ΠΑΡΑΚΑΤΩ
-        if (((Comparable)newData).compareTo((newNode.getNodeData())) < 0) { // ΑΚΟΛΟΥΘΕΙ ΕΞΗΓΗΣΗ ΤΩΝ ΑΠΟΤΕΛΕΣΜΑΤΩΝ ΤΟΥ Comperable
+        if (((Comparable)newData).compareTo((newNode.getNodeData())) < 0) // ΑΚΟΛΟΥΘΕΙ ΕΞΗΓΗΣΗ ΤΩΝ ΑΠΟΤΕΛΕΣΜΑΤΩΝ ΤΟΥ Comperable
             // ΑΝ < 0 ΤΟ .newData ΕΙΝΑΙ ΜΙΚΡΟΤΕΡΟ ΑΠΌ ΤΟ  newNode.getNodeData()
             // ΑΝ = 0 ΤΟ .newData ΕΙΝΑΙ ΙΣΟ ΜΕ ΤΟ  newNode.getNodeData()
             // ΑΝ > 0 ΤΟ .newData ΕΙΝΑΙ ΜΕΓΑΛΥΤΕΡΟ ΑΠΌ ΤΟ  newNode.getNodeData()
@@ -22,13 +22,11 @@ public class  BSTree  {
                 newNode.setLeftNode(new TreeNode(newData));
             else
                 insertNode(newData, newNode.getLeftNode());
-        }
-        else {
+        else
             if (newNode.getRightNode() == null)
                 newNode.setRightNode(new TreeNode(newData));
             else
                 insertNode(newData, newNode.getRightNode());
-        }
     } // End of function: insertNode()
     // ΕΝΘΕΜΑΤΙΚΗ ΔΙΕΛΕΥΣΗ (InOrderTraversal) ΑΠΟ ΤΟΥΣ ΚΟΜΒΟΥΣ ΤΟΥ ΔΥΑΔΙΚΟΥ ΔΕΝΤΡΟΥ
     public void inOrderTraversal() {
@@ -94,8 +92,21 @@ public class  BSTree  {
         return (numOfNodes);
     } // End of function: numberOfNodes()
     public int treeHeight() {
-        int height = 0;
-
-        return (height);
-    } // End of function: treeHeight()
+        return (treeHeight(root));
+    } // End of function: public treeHeight()
+    private int treeHeight(TreeNode node) {
+        if (node == null)
+            return -1;
+        return 1+ Math.max(treeHeight(node.getLeftNode()), treeHeight(node.getRightNode()));
+    } // End of function: private treeHeight()
+    public boolean search(Object data) {
+        return (search(root, data));
+    } // End of function: public search()
+    private boolean search(TreeNode node, Object data) {
+        if (node.getNodeData() == data)
+            return true;
+        if (search(node.getLeftNode(), data))
+            return true;
+        return search(node.getRightNode(), data);
+    } // End of function: private search()
 }
