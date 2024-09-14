@@ -25,5 +25,8 @@ public class TreeNode {
     public TreeNode getRightNode() {
         return this.right;
     } // End of function: getRightNode()
-
+    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5Α.1
+    public boolean isLeaf() {
+        return ((this.left.getNodeData() == null) && (this.right.getRightNode() == null));
+    }
 }
