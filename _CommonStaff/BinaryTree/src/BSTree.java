@@ -1,6 +1,6 @@
 import javax.swing.tree.TreeCellRenderer;
 
-public class BSTree {
+public class  BSTree {
     private TreeNode root;
     public BSTree() { // Default constructor
         root = null;

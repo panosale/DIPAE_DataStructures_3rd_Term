@@ -1,10 +1,10 @@
 public class TreeNode {
-    private TreeNode leftNode;
+    private TreeNode left;
     private int item;
-    private TreeNode rightNode;
+    private TreeNode right;
     public TreeNode(int data) { // Default constructor
         item = data;
-        leftNode = rightNode = null;
+        left = right = null;
     } // End of: Default constructor
     // Getters & Setters
     public void setNodeData(int newItem) {
@@ -13,17 +13,17 @@ public class TreeNode {
     public int getNodeData() {
         return this.item;
     } // End of function: getNodeData()
-    public void setLeftNode(TreeNode newLeftNode) {
-        this.leftNode = newLeftNode;
+    public void setLeftNode(TreeNode newLeft) {
+        this.left = newLeft;
     } // End of function: setLeftNode()
     public TreeNode getLeftNode() {
-        return this.leftNode;
+        return this.left;
     } // End of function: getLeftNode()
     public void setRightNode(TreeNode newRightNode) {
-        this.rightNode = newRightNode;
+        this.right = newRightNode;
     } // End of function: setRightNode()
     public TreeNode getRightNode() {
-        return this.rightNode;
+        return this.right;
     } // End of function: getRightNode()
 
 }
