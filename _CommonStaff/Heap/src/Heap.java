@@ -62,4 +62,11 @@ public class Heap {
         this.btree[father] = lastItem;
         return (removeItem);
     } // End of function: public remove()
+    public Object[] heapSort() {
+        int size = this.size();
+        Object[] array = new Object[size];
+        for (int i = size-1; i > 0; i--)
+            array[i] = this.remove();
+        return array;
+    } // End of function: public heapSort()
 }
