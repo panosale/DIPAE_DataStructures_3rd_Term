@@ -49,5 +49,12 @@ public class Main {
 //            System.out.println(i);
 //            System.out.println(myHeap.remove());
 //        }
+        // Ζητούμενα Άσκησης 6.2
+        String matrixAL[] = {
+                "Πάνος", "Νικολέτα", "Γεώργιος", "Ελένη", "Μαρία", "Λουκάς", "Κωνσταντίνος",
+                "Αλεξάνδρα", "Γεωργία", "Νικόλαος", "Φοίβος", "Απόστολος"
+        };
+        HeapAL<String> myHeapAL = new HeapAL<>();
+
     }
 }
