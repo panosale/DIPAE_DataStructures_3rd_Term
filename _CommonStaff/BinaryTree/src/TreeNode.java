@@ -25,5 +25,7 @@ public class TreeNode {
     public TreeNode getRightNode() {
         return this.right;
     } // End of function: getRightNode()
-
+    public boolean isLeaf() {
+        return ((this.left == null) && (this.right == null));
+    } // End of function: isLeaf()
 }

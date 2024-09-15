@@ -27,6 +27,6 @@ public class TreeNode {
     } // End of function: getRightNode()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5.1
     public boolean isLeaf() {
-        return ((this.left.getNodeData() == null) && (this.right.getRightNode() == null));
-    }
+        return (this.left == null) && (this.right == null);
+    } // End of function: isLeaf()
 }
