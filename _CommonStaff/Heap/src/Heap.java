@@ -16,13 +16,13 @@ public class Heap {
     } // End of: Second constructor
     public int size() {
         return (this.index);
-    } // End of: size function
+    } // End of: public size() function
     public boolean isEmpty() {
         return (this.index == 0);
-    } // End of: isEmpty function
+    } // End of: public isEmpty() function
     public boolean isFull() {
         return (this.index == this.capacity);
-    } // End of: isFull function
+    } // End of: public isFull() function
     public void insert(Object newItem) throws HeapFullException {
         if (this.isFull())
             throw new HeapFullException(MSG_HEAP_FULL);
@@ -37,7 +37,7 @@ public class Heap {
             son = father;
             father = son / 2;
         }
-    }
+    } // End of function: public insert()
     public Object remove() throws HeapEmptyException {
         if (this.isEmpty())
             throw new HeapEmptyException(MSG_HEAP_EMPTY);
@@ -60,5 +60,5 @@ public class Heap {
         }
         this.btree[father] = lastItem;
         return (removeItem);
-    }
+    } // End of function: public remove()
 }
