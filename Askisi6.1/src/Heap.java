@@ -1,13 +1,11 @@
-public class Heap {
-    public static final String MSG_HEAP_FULL = "Ο σωρός είναι γεμάτος!"; // Δήλωση σταθεράς μηνύματος γεμάτου Σωρού
-    public static final String MSG_HEAP_EMPTY = "Ο σωρός είναι κενός!"; // Δήλωση σταθεράς μηνύματος κενού Σωρού
+public class Heap implements HeapInterface{
 
     private Object[] btree;
     private int index;
     private int capacity;
 
     public Heap() {
-        this(100);
+        this(10);
     } // End of: Default constructor
     public Heap(int cap) {
         this.capacity = cap;
@@ -48,7 +46,7 @@ public class Heap {
         Object removeItem = this.btree[1];
         index--;
         father = 1;
-        if (index > 2 && ((Comparable)this.btree[2]).compareTo((Comparable)this.btree[3]) > 0)
+        if ((this.index > 2) && ((Comparable)this.btree[2]).compareTo((Comparable)this.btree[3]) > 0)
             son = 2;
         else
             son = 3;
@@ -62,4 +60,12 @@ public class Heap {
         this.btree[father] = lastItem;
         return (removeItem);
     } // End of function: public remove()
+    // Ζητούμενο Άσκησης 6.2
+    public Object[] heapSort() { // ΠΡΟΣΟΧΗ! Κατά την ταξινόμηση τα στοιχεία ΑΦΑΙΡΟΥΝΤΑΙ από τον Σωρό και προστίθενται σε πίνακα
+        int size = this.size();
+        Object[] array = new Object[size];
+        for (int i = size-1; i >= 0; i--)
+            array[i] = this.remove();
+        return array;
+    } // End of function: public heapSort()
 }
