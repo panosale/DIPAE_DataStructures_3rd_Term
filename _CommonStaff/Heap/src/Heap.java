@@ -31,6 +31,7 @@ public class Heap {
         this.btree[son] = newItem; // Το newItem τοποθετείτε αρχικά στην τελευταία θέση του Σωρού
         father = son / 2;
         while (son > 1 && ((Comparable)this.btree[son]).compareTo((Comparable)this.btree[father]) > 0) {
+            // Επειδή είναι Σωρός Μεγίστων θα πρέπει κάθε τιμή στη θέση father να είναι μεγαλύτερη από την τιμή στη θέση son
             Object tmp = this.btree[father]; // Swap
             this.btree[father] = this.btree[son]; // Swap
             this.btree[son] = tmp; // Swap
