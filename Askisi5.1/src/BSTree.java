@@ -61,11 +61,20 @@ public class  BSTree  {
         postOrder(node.getRightNode());
         System.out.print(node.getNodeData().toString() + "|"); // <--- ΠΡΟΣΟΧΗ ΕΔΩ! Η ΕΚΤΥΠΩΣΗ ΠΡΕΠΕΙ ΝΑ ΒΡΙΣΚΕΤΑΙ ΑΚΡΙΒΩΣ ΣΕ ΑΥΤΗ ΤΗ ΘΕΣΗ
     } // End of function: postOrder()
+    public int size() { // ΜΕΤΡΗΣΗ ΤΩΝ ΚΟΜΒΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
+        return size(root);
+    } // End of function: public size()
+    private int size(TreeNode node) {
+        if (node == null)
+            return 0;
+        else
+            return (size(node.getLeftNode()) + size(node.getRightNode()) + 1);
+    } // End of function: private size()
     // ΔΥΑΔΙΚΑ ΔΕΝΤΡΑ
-    public int countNodes() { // ΜΕΤΡΗΣΗ ΤΩΝ ΚΟΜΒΩΝ/ΑΚΜΩΝ ΤΟΥ ΔΕΝΤΡΟΥ
+    public int countNodes() { // ΜΕΤΡΗΣΗ ΤΩΝ ΚΟΜΒΩΝ ΤΟΥ ΔΕΝΤΡΟΥ - ΙΔΙΑ ΜΕ ΤΗΝ size()
         return countNodes(root);
     } // End of function: countNodes()
-    private int countNodes(TreeNode node) {
+    private int countNodes(TreeNode node) { // ΜΕΤΡΗΣΗ ΤΩΝ ΚΟΜΒΩΝ ΤΟΥ ΔΕΝΤΡΟΥ - ΙΔΙΑ ΜΕ ΤΗΝ size()
         if (node == null)
             return 0;
         else

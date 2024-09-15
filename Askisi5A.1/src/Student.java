@@ -1,5 +1,5 @@
 // Άσκηση 1.1
-public class Student {
+public class Student implements Comparable<Student> {
     private int aM;
     private String onoma;
     private String epitheto;
@@ -78,5 +78,14 @@ public class Student {
     public String toString() {
         return "Αριθμός μητρώου: " + this.aM + "\nΟνοματεπώνυμο: " + this.epitheto + ", " + this.onoma + "\nΦύλο: " + this.fylo + "\nΗλικία: " + this.hlikia
                 + "\nΑριθμός απουσιών: " + this.arithmosApousion + "\nΒαθμός: " + this.vathmos;
+    }
+    public int compareTo(Student S) {
+        if (this.aM < S.aM)
+            return -1;
+        else
+            if (this.aM > S.aM)
+                return 1;
+            else
+                return 0;
     }
 }

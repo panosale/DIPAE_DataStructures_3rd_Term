@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9deedf79-33ba-4921-bd0c-d793ff57450f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Askisi5A.1/src/GBSTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Askisi5A.1/src/GTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Askisi1(2.1)/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi1(2.1)/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BSTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BSTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Askisi5A.1/src/BSTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi5A.1/src/BSTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Askisi5A.1/src/BSTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Askisi5A.1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi5A.1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Askisi5A.1/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Askisi5A.1/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Askisi5A.1/src/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_CommonStaff/LinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_CommonStaff/LinkedList/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +52,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Common/Programming/GitHub/DIPAE_DataStructures_3rd_Term/_CommonStaff/BinaryTree&quot;
+    &quot;last_opened_file_path&quot;: &quot;F:/Common/Programming/GitHub/DIPAE_DataStructures_3rd_Term/Askisi5.1&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

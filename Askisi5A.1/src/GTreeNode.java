@@ -1,28 +1,28 @@
-public class TreeNode {
-    private TreeNode left;
-    private Object item;
-    private TreeNode right;
-    public TreeNode(Object data) { // Default constructor
+public class GTreeNode<E> {
+    private GTreeNode left;
+    private E item;
+    private GTreeNode right;
+    public GTreeNode(E data) { // Default constructor
         item = data;
         left = right = null;
     } // End of: Default constructor
     // Getters & Setters
-    public void setNodeData(Object newItem) {
+    public void setNodeData(E newItem) {
         this.item = newItem;
     } // End of function: setNodeData()
-    public Object getNodeData() {
+    public E getNodeData() {
         return this.item;
     } // End of function: getNodeData()
-    public void setLeftNode(TreeNode newLeft) {
+    public void setLeftNode(GTreeNode newLeft) {
         this.left = newLeft;
     } // End of function: setLeftNode()
-    public TreeNode getLeftNode() {
+    public GTreeNode getLeftNode() {
         return this.left;
     } // End of function: getLeftNode()
-    public void setRightNode(TreeNode newRightNode) {
+    public void setRightNode(GTreeNode newRightNode) {
         this.right = newRightNode;
     } // End of function: setRightNode()
-    public TreeNode getRightNode() {
+    public GTreeNode getRightNode() {
         return this.right;
     } // End of function: getRightNode()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5Α.1
