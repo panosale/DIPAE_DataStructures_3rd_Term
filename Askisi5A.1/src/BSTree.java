@@ -94,8 +94,63 @@ public class  BSTree  {
         return (numOfNodes);
     } // End of function: numberOfNodes()
     public int treeHeight() {
-        int height = 0;
-
-        return (height);
-    } // End of function: treeHeight()
+        return (treeHeight(root));
+    } // End of function: public treeHeight() ver1
+    private int treeHeight(TreeNode node) {
+        if (node == null)
+            return -1;
+        return (1 + Math.max(treeHeight(node.getLeftNode()), treeHeight(node.getRightNode())));
+    } // End of function: private treeHeight() ver1
+    public boolean search(Object data) {
+        return (search(root, data));
+    } // End of function: public search()
+    private boolean search(TreeNode node, Object data) {
+        if (node == null)
+            return false;
+        if (node.getNodeData() == data)
+            return true;
+        if (search(node.getLeftNode(), data))
+            return true;
+        return (search(node.getRightNode(), data));
+    } // End of function: private search()
+    public int treeHeight(Object data) {
+        if (search(data)) return (treeHeight(root, data));
+        return -1;
+    } // End of function: public treeHeight() ver2
+    private int treeHeight(TreeNode node, Object data) {
+        if (node.getNodeData() == data)
+            return 0;
+        if (((Comparable)data).compareTo(node.getNodeData()) < 0)
+            return (treeHeight(node.getLeftNode(), data) + 1);
+        return (treeHeight(node.getRightNode()) + 1);
+    } // End of function: private treeHeight() ver2
+    // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5.1 ???
+    public Object[] inOrderSort() {
+        Object[] array = new Object[this.countNodes()];
+        inOrderSort(root, array);
+        return array;
+    } // End of function: public inOrderSort()
+    private int i; // Global private μεταβλητή της θέσης του δείκτη μέσα στον πίνακα για χρήση στην inOrderSort
+    private void inOrderSort(TreeNode node, Object[] pin) {
+        if (node == null)
+            return;
+        inOrderSort(node.getLeftNode(), pin);
+        pin[i] = node.getNodeData();
+        i++;
+        inOrderSort(node.getRightNode(), pin);
+    } // End of function: private inOrderSort()
+    private int j; // Global private μεταβλητή της θέσης του δείκτη μέσα στον πίνακα για χρήση στην inOrderSort
+    private Object[] table; // Global private πίνακας για χρήση στην inOrderSortGT
+    public Object[] bsTreeSort() {
+        table = new Object[this.countNodes()];
+        inOrderSortGT(root);
+        return table;
+    } // End of function: public bsTreeSort()
+    private void inOrderSortGT(TreeNode node) {
+        if (node == null)
+            return;
+        inOrderSortGT(node.getLeftNode());
+        table[j++] = node.getNodeData();
+        inOrderSortGT(node.getRightNode());
+    } // End of function: private inOrderSortGT()
 }

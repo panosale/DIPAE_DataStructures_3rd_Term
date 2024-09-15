@@ -87,10 +87,6 @@ public class  BSTree  {
         }
     } // End of function: countLeafs()
     // ΖΗΤΟΥΜΕΝΑ ΑΣΚΗΣΗΣ 5.2
-    public int numberOfNodes() {
-        int numOfNodes = this.countNodes();
-        return (numOfNodes);
-    } // End of function: numberOfNodes()
     public int treeHeight() {
         return (treeHeight(root));
     } // End of function: public treeHeight() ver1
