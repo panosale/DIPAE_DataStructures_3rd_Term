@@ -132,23 +132,23 @@ public class Main {
                 while (true) {
                     if (f1_data < f2_data) {
                         out_data.writeInt(f1_data);
-                        System.out.println(f1_data + " from file1 ");
+                        System.out.println(f1_data + " from file1: " + inp_f1);
                         f1_data = inp_data1.readInt();
                     }
                     else {
                         out_data.writeInt(f2_data);
-                        System.out.println(f2_data + " from file2 ");
+                        System.out.println(f2_data + " from file2: " + inp_f2);
                         f2_data = inp_data2.readInt();
                     }
                 }
             } catch (EOFException eof) {
                 if (inp_data1.available() > 0) {
                     inp_data2.close();
-                    System.out.println(" exit file2 ");
+                    System.out.println(" exit file2: " + inp_f2);
                     try {
                         while (true) {
                             out_data.writeInt(f1_data);
-                            System.out.println(f1_data + " from file1 ");
+                            System.out.println(f1_data + " from file1: " + inp_f1);
                             f1_data = inp_data1.readInt();
                         }
                     } catch (EOFException eof1) {
@@ -158,11 +158,11 @@ public class Main {
                 }
                 else {
                     inp_data1.close();
-                    System.out.println(" exit file1 ");
+                    System.out.println(" exit file1: " + inp_f1);
                     try {
                         while (true) {
                             out_data.writeInt(f2_data);
-                            System.out.println(f2_data + " from file2 ");
+                            System.out.println(f2_data + " from file2: " + inp_f2);
                             f2_data = inp_data2.readInt();
                         }
                     } catch (EOFException eof1) {
@@ -172,13 +172,13 @@ public class Main {
                 }
             }
         } catch (IOException error) {
-
+            System.out.println("Error: " + error);
         }
     }
     public static void main(String[] args) {
         System.out.println("Hello world!\nΑΣΚΗΣΗ ΠΡΑΞΗΣ 7.2");
-        writeBufferedIntsToFile(20, "./Integers1_file.dat", 2);
-        writeBufferedIntsToFile(20, "./Integers2_file.dat", 3);
+        writeBufferedIntsToFile(10, "./Integers1_file.dat", 2);
+        writeBufferedIntsToFile(10, "./Integers2_file.dat", 3);
         readBufferedIntsFromFile("./Integers1_file.dat");
         readBufferedIntsFromFile("./Integers2_file.dat");
         mergeFiles("./Integers1_file.dat", "./Integers2_file.dat", "./Integers_merged_file.dat");
