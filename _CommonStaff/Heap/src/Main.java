@@ -1,6 +1,6 @@
 // ΥΛΟΠΟΙΗΣΗ ΣΩΡΟΥ ΜΕ ΣΧΕΔΟΝ ΠΛΗΡΕΣ ΔΕΝΤΡΟ
 public class Main {
-    public static boolean heapSort(Object[] array) { // ΝΑ ΔΟΚΙΜΑΣΤΕΙ ΑΥΤΗ function
+    public static boolean heapSort(Object[] array) {
         Heap tranfserHeap = new Heap(array.length);
         try {
             for (int i = 0; i < array.length; i++)
@@ -18,5 +18,18 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world!\nToday we are implementing and testing the Heap Data Structure.");
+        String matrix[] = {
+                "Πάνος", "Νικολέτα", "Γεώργιος", "Ελένη", "Μαρία", "Λουκάς", "Κωνσταντίνος",
+                "Αλεξάνδρα", "Μαρία", "Νικόλαος", "Φοίβος", "Απόστολος"
+        };
+        System.out.println("*** UNSORTED matrix ARRAY ***");
+        for (int i = 0; i < matrix.length; i++)
+            System.out.println(matrix[i] + ", ");
+        if (heapSort(matrix)) {
+            System.out.println("*** UNSORTED matrix ARRAY ***");
+            for (int i = 0; i < matrix.length; i++)
+                System.out.println(matrix[i] + ", ");
+
+        }
     }
 }
