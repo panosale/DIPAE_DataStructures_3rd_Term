@@ -57,7 +57,7 @@ public class Heap {
         while (son <= index && ((Comparable)this.btree[son]).compareTo((Comparable)lastItem) > 0) {
             this.btree[father] = this.btree[son];
             father = son;
-            son  = father / 2;
+            son  = father * 2;
             if (son + 1 <= index && ((Comparable)this.btree[son + 1]).compareTo((Comparable)this.btree[son]) > 0)
                 son++;
         }
