@@ -40,6 +40,7 @@ public class Heap {
         }
     } // End of function: public insert()
     public Object remove() throws HeapEmptyException {
+        // Κατά τη διαγραφή ενός στοιχείου, το τελευταίο στοιχείο του δέντρου παίρνει τη θέση που είχε αυτό που διαγράφηκε...
         if (this.isEmpty())
             throw new HeapEmptyException(MSG_HEAP_EMPTY);
         int father, son;
@@ -52,6 +53,7 @@ public class Heap {
             son = 2;
         else
             son = 3;
+        // ...αλλά αν αυτό το στοιχείο δεν είναι το μεγαλύτερο του Σωρού...
         while (son <= index && ((Comparable)this.btree[son]).compareTo((Comparable)lastItem) > 0) {
             this.btree[father] = this.btree[son];
             father = son;
@@ -59,6 +61,7 @@ public class Heap {
             if (son + 1 <= index && ((Comparable)this.btree[son + 1]).compareTo((Comparable)this.btree[son]) > 0)
                 son++;
         }
+        // ...θα πρέπει να το τοποθετηθεί στη σωστή του θέση.
         this.btree[father] = lastItem;
         return (removeItem);
     } // End of function: public remove()
